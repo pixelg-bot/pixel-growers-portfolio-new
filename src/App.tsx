@@ -165,10 +165,10 @@ function ProjectCarousel() {
   </div>;
 }
 const team = [
-  { name: 'Swati Mitra', role: 'Founder & CEO', image: '/images/swati-mitra.webp' },
+  { name: 'Swati Mitra', role: 'Founder & CEO', image: '/images/swati-mitra-portrait.webp' },
   { name: 'Atul Das', role: 'Managing Partner', image: '/images/atul-das.webp' },
-  { name: 'Somya Sachan', role: 'Client Relationship Manager', image: '/images/somya-sachan.webp' },
-  { name: 'Suraj Shrimali', role: 'Project Lead' },
+  { name: 'Somya Sachan', role: 'Client Relationship Manager', image: '/images/somya-sachan-portrait.webp' },
+  { name: 'Suraj Shrimali', role: 'Project Lead', image: '/images/suraj-shrimali-closeup.webp' },
 ];
 const testimonials = [
   { quote: 'The team worked efficiently, made requested website updates promptly, and left me happy with the result.', highlight: 'made requested website updates promptly', name: 'Xubaojian', location: 'United States' },
@@ -360,7 +360,7 @@ function App() {
         <div className="about-topline">
           <FadeIn><p className="section-kicker">ABOUT PIXEL GROWERS</p><h2 className="section-title">A small team.<br />A bigger <span className="shining-word">perspective.</span></h2></FadeIn>
         </div>
-        <FadeIn delay={.1}><figure className="about-visual"><img loading="lazy" decoding="async" src="/images/about-team-discussion-v3.webp" alt="Three teammates discussing a design together at an office computer" /><figcaption>Curious minds. Shared ambition.</figcaption></figure></FadeIn>
+        <FadeIn delay={.1}><figure className="about-visual"><img loading="lazy" decoding="async" src="/images/about-office-team.webp" alt="Office colleagues collaborating around a laptop" /><figcaption>Curious minds. Shared ambition.</figcaption></figure></FadeIn>
         <FadeIn className="about-detail" delay={.15}>
           <h3>We connect clear thinking with thoughtful design.</h3>
           <p>Pixel Growers brings strategy, design, and technology together to create digital experiences with purpose.</p>
@@ -526,6 +526,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
