@@ -1,0 +1,301 @@
+{
+  "cases": [
+    {
+      "id": "serene",
+      "name": "Serene Life Hospital",
+      "domain": "serenelifehospital.org",
+      "category": "healthcare",
+      "sector": "Healthcare",
+      "market": "Chennai, India",
+      "brief": "Build visibility in a competitive healthcare search market. The supplied brief covers the website and Google Business Profile.",
+      "focus": "Competitive service searches with a clear geographic intent.",
+      "rows": [
+        [
+          "psychiatric hospital in chennai",
+          ">100",
+          "3",
+          "4",
+          "~3 months"
+        ],
+        [
+          "best mental hospital in chennai",
+          ">100",
+          "2",
+          "5",
+          "~3 months"
+        ]
+      ],
+      "source": "534e5eae-fec6-4a4a-ac7f-d689913a003a",
+      "highlight": "From beyond #100 to a reported #3 finish.",
+      "metric": "#3",
+      "metricLabel": "Reported finishing position",
+      "note": "The ranking sheet does not identify the search channel for each keyword.",
+      "evidence": "/images/seo-portfolio/serene-ranking-evidence.png"
+    },
+    {
+      "id": "avanika",
+      "name": "Avanika Ayurvedic",
+      "domain": "www.avanikaayurvedic.com",
+      "category": "healthcare",
+      "sector": "Ayurvedic wellness",
+      "market": "Coimbatore, India",
+      "brief": "Help a newly created website become discoverable for relevant Ayurvedic treatment searches.",
+      "focus": "Service-led keywords and location-specific search demand.",
+      "rows": [
+        [
+          "Ayurvedic massage in coimbatore",
+          ">100",
+          "1",
+          "4",
+          "~3 months"
+        ],
+        [
+          "kerala ayurvedic massage in coimbatore",
+          ">100",
+          "2",
+          "4",
+          "~3 months"
+        ]
+      ],
+      "source": "435a92c2-865e-4982-8463-d5279a0c0b2e",
+      "highlight": "A new website. A reported #1 finish.",
+      "metric": "#1",
+      "metricLabel": "Reported finishing position",
+      "note": "Both later recorded positions are #4; the #1 result is the reported finish, not a current ranking.",
+      "evidence": "/images/seo-portfolio/avanika-ranking-evidence.png"
+    },
+    {
+      "id": "goldx",
+      "name": "Goldx Pollachi",
+      "domain": null,
+      "category": "local",
+      "sector": "Local-search SEO",
+      "market": "Pollachi, India",
+      "brief": "Improve local discoverability for a specialist gold-buying business and its distinctive search terms.",
+      "focus": "High-intent local queries in the supplied Google Business Profile ranking record.",
+      "rows": [
+        [
+          "Instant Cash for Gold pollachi",
+          "N/A",
+          "1",
+          "1",
+          "~2 months"
+        ],
+        [
+          "Money for gold Pollachi",
+          "N/A",
+          "1",
+          "1",
+          "~3 months"
+        ]
+      ],
+      "source": "39671d8a-01f9-4d39-8e3e-7fce96eb1374",
+      "highlight": "Two local queries. Two recorded #1 positions.",
+      "metric": "2 × #1",
+      "metricLabel": "Finishing and later recorded positions",
+      "note": "This is Google Business Profile/local-search evidence. Starting positions were not supplied.",
+      "evidence": "/images/seo-portfolio/goldx-ranking-evidence.png"
+    },
+    {
+      "id": "gargash",
+      "name": "Gargash Insurance",
+      "domain": "www.gargashinsurance.com",
+      "category": "finance",
+      "sector": "Insurance",
+      "market": "Dubai, UAE",
+      "brief": "Compete for commercially important insurance-related searches in a highly competitive search environment.",
+      "focus": "Brokerage and insurance-planning queries with distinct search intent.",
+      "rows": [
+        [
+          "Insurance Brokers in Dubai",
+          ">40",
+          "1",
+          "3",
+          "~4 months"
+        ],
+        [
+          "Insurance Broker Dubai",
+          ">50",
+          "1",
+          "3",
+          "~6 months"
+        ],
+        [
+          "child Education plan Dubai",
+          ">20",
+          "4",
+          "5",
+          "~2 months"
+        ]
+      ],
+      "source": "60efd494-cc5a-456c-9109-a218a125010c",
+      "highlight": "Two brokerage queries reached a reported #1 finish.",
+      "metric": "2 × #1",
+      "metricLabel": "Reported finishing positions",
+      "note": "The two brokerage queries were later recorded at #3. Timelines differ by keyword.",
+      "evidence": "/images/seo-portfolio/gargash-ranking-evidence.png"
+    },
+    {
+      "id": "anjappar",
+      "name": "Anjappar",
+      "domain": "anjappar.com.hk",
+      "category": "food",
+      "sector": "Restaurant",
+      "market": "Hong Kong",
+      "brief": "Connect a South Indian restaurant with people searching for relevant South Indian cuisine.",
+      "focus": "Cuisine discovery and geographic relevance.",
+      "rows": [
+        [
+          "Chettinad Indian Cuisine Hong Kong",
+          ">20",
+          "3",
+          "1",
+          "~4 months"
+        ],
+        [
+          "south indian restaurant in hong kong",
+          ">90",
+          "4",
+          "7",
+          "~3 months"
+        ]
+      ],
+      "source": "ecf2bc4c-8db8-4297-9b68-4d0a2270034f",
+      "highlight": "From beyond #20 to a reported #3 finish.",
+      "metric": "#3",
+      "metricLabel": "Reported finishing position",
+      "note": "The supplied brief identifies the restaurant and audience; the table records keyword positions and approximate timelines.",
+      "evidence": "/images/seo-portfolio/anjappar-ranking-evidence.png"
+    },
+    {
+      "id": "prime",
+      "name": "Prime Organic",
+      "domain": "primeorganic.asia",
+      "category": "food",
+      "sector": "Organic grocery",
+      "market": "Hong Kong",
+      "brief": "Build search visibility for a newly created organic-products website and its relevant search audience.",
+      "focus": "Organic-grocery discovery across website and local-search touchpoints.",
+      "rows": [
+        [
+          "Indian Organic Grocery in hong Kong",
+          "N/A",
+          "5",
+          "1 (GMB)",
+          "~4 months"
+        ],
+        [
+          "organic grocery online hong kong",
+          "N/A",
+          "7",
+          "12",
+          "~4 months"
+        ],
+        [
+          "Buy organic grocery online",
+          "N/A",
+          "8",
+          "17",
+          "~2 months"
+        ]
+      ],
+      "source": "1ff06c0d-c9ba-4e71-bcc5-1ea719492f89",
+      "highlight": "A new-site visibility record across three grocery searches.",
+      "metric": "3 queries",
+      "metricLabel": "Supplied keyword examples",
+      "note": "The later #1 is explicitly marked GMB. It is a local-search result and is not directly comparable with an organic website position. Starting positions were not supplied.",
+      "evidence": "/images/seo-portfolio/prime-ranking-evidence.png"
+    }
+  ],
+  "disclosure": "Historical positions transcribed from the supplied ranking sheets. Report dates and live analytics access were not supplied. Finishing and later recorded positions are shown separately; these are not current rank checks or guaranteed outcomes.",
+  "tools": [
+    {
+      "group": "Research & intent",
+      "tools": [
+        "Google Trends",
+        "Semrush"
+      ]
+    },
+    {
+      "group": "Technical & measurement",
+      "tools": [
+        "Google Search Console",
+        "Google Analytics"
+      ]
+    },
+    {
+      "group": "Content & reporting",
+      "tools": [
+        "WordPress",
+        "Looker Studio"
+      ]
+    },
+    {
+      "group": "AI-assisted research",
+      "tools": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity",
+        "NotebookLM"
+      ]
+    }
+  ],
+  "certificates": [
+    "Google Analytics",
+    "Semrush Academy",
+    "HubSpot"
+  ],
+  "steps": [
+    {
+      "title": "Discover",
+      "subtitle": "Audit the search landscape.",
+      "copy": "Clarify the business goals, review crawlability, map competitors and establish an honest search baseline.",
+      "output": "Audit findings + opportunity map",
+      "visual": "audit"
+    },
+    {
+      "title": "Plan",
+      "subtitle": "Connect intent to the right pages.",
+      "copy": "Group keywords by intent, map the page architecture and prioritize an achievable content and technical roadmap.",
+      "output": "Keyword-to-page map + prioritized roadmap",
+      "visual": "intent"
+    },
+    {
+      "title": "Optimize",
+      "subtitle": "Make relevance easier to understand.",
+      "copy": "Improve on-page structure, internal links and technical foundations. Shape useful content around the queries that matter.",
+      "output": "Implementation checklist + optimized pages",
+      "visual": "pages"
+    },
+    {
+      "title": "Measure",
+      "subtitle": "Turn evidence into the next decision.",
+      "copy": "Review search visibility and organic engagement, document changes and refine the next cycle using recorded evidence.",
+      "output": "Performance review + next-step priorities",
+      "visual": "measure"
+    }
+  ],
+  "launch": [
+    {
+      "phase": "01 / BEFORE BUILD",
+      "title": "Start with search intent",
+      "copy": "Map priority queries to the sitemap. Define page purpose, content briefs and internal-link relationships before design decisions harden."
+    },
+    {
+      "phase": "02 / BEFORE RELEASE",
+      "title": "Make the site search-ready",
+      "copy": "Check crawl access, canonical signals, metadata, redirects and measurement. Keep staging separate from the launch-ready site."
+    },
+    {
+      "phase": "03 / AFTER LAUNCH",
+      "title": "Validate, then improve",
+      "copy": "Check index coverage and search visibility, resolve early technical issues and use the first performance signals to prioritize the next work."
+    }
+  ],
+  "references": [
+    "https://www.behance.net/gallery/257129987/SEO-Growth-Strategy-Consultant-Portfolio",
+    "https://www.behance.net/gallery/253926851/Keyword-Research-to-Technical-SEO-Strategy",
+    "https://www.behance.net/gallery/250747039/Digital-marketing-strategist-portfolio",
+    "https://www.behance.net/gallery/237251021/Digital-Marketing-Portfolio"
+  ]
+}

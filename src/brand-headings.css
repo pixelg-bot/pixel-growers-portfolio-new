@@ -1,0 +1,26 @@
+/* Shared Pixel Growers heading treatment across the local website. */
+@keyframes pg-heading-shine{0%,15%{background-position:100% 50%}85%,100%{background-position:0% 50%}}
+:is(h1,h2,h3,h4){color:#fff}
+html body #root main .section-title .shining-word,.brand-shine,.shining-word,:is(h1,h2) em,h2:not(:has(.brand-shine,.shining-word,em)),h3,h4,.hero-rotating-item{
+ background-image:linear-gradient(110deg,#ae4fe0 0%,#d384ff 30%,#fcf3ff 45%,#e2adff 50%,#bd5cf1 65%,#aa45da 100%)!important;
+ background-size:250% 100%!important;background-repeat:repeat!important;background-clip:text!important;-webkit-background-clip:text!important;
+ color:#cf87ff!important;-webkit-text-fill-color:transparent!important;animation:pg-heading-shine 5.5s ease-in-out infinite!important;filter:none!important;
+}
+:is(h1,h2):has(.brand-shine,.shining-word,em){background:none!important;color:#fff!important;-webkit-text-fill-color:#fff!important;animation:none!important}
+:is(h1,h2) :is(.brand-shine,.shining-word,em){-webkit-text-fill-color:transparent!important}
+.service-preview-content h3,.service-preview-content .service-tags span{font-weight:700!important;color:#d68aff!important}
+.service-tags span{background:#8d32bd18!important;border-color:#b56cda66!important;color:#d68aff!important;font-weight:700!important}
+.consultation-cta{background:linear-gradient(110deg,#8b20b9 10%,#ba4fe0 36%,#dda2ed 47%,#a333cd 60%,#8b20b9 90%)!important;background-size:250% 100%!important;animation:pg-heading-shine 5.5s ease-in-out infinite!important}
+@media(prefers-reduced-motion:reduce){.brand-shine,.shining-word,:is(h1,h2) em,h2,h3,h4,.hero-rotating-item,.consultation-cta{animation:none!important;background-position:25% 50%!important}}
+
+/* Give gradient glyphs room for ascenders, descenders and final-letter bearings. */
+:is(h1,h2,h3,h4){overflow:visible!important;text-overflow:clip!important;max-height:none!important;padding-block:.12em;line-height:1.2}
+.brand-shine,.shining-word,:is(h1,h2) em{display:inline-block;padding:.07em .10em .13em;margin:-.07em -.10em -.13em;max-width:100%;overflow:visible!important;vertical-align:baseline;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+h3,h4{padding-inline:.08em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+/* Panel labels are solid, centered title bars rather than clipped gradient text. */
+body .expertise-panel>h3{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:58px;margin:-8px 0 25px;padding:14px 12px;border:1px solid #b66cdd;border-radius:12px;background:#8236ab!important;background-image:none!important;background-clip:border-box!important;-webkit-background-clip:border-box!important;color:#fff!important;-webkit-text-fill-color:#fff!important;animation:none!important;font-weight:700;text-align:center;line-height:1.3}
+body .expertise-panel>h3>img{filter:brightness(0) invert(1)!important;width:25px;height:28px;object-fit:contain}
+@keyframes pg-button-sweep{0%,20%{transform:translateX(-160%) skewX(-22deg);opacity:0}30%{opacity:.8}60%,100%{transform:translateX(480%) skewX(-22deg);opacity:0}}
+body .consultation-cta{position:relative;isolation:isolate;overflow:hidden;background:#8d2cb7!important;color:white!important;box-shadow:0 0 20px #ba54e53b!important}
+body .consultation-cta:after{content:'';position:absolute;inset:-40% auto -40% -20%;width:32%;background:linear-gradient(90deg,transparent,#fff9,transparent);pointer-events:none;animation:pg-button-sweep 3.8s ease-in-out infinite;z-index:1}
+@media(prefers-reduced-motion:reduce){body .consultation-cta:after{animation:none;display:none}}

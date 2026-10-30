@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type ReactNode } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
-import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Globe2, Mail, MapPin, Monitor, MousePointerClick, Pause, Play, Search, Share2, Sparkles, Star, X, type LucideIcon } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Globe2, FileText, Download, Palette, Mail, MapPin, Monitor, MousePointerClick, Pause, Play, Search, Share2, Sparkles, Star, X, type LucideIcon } from 'lucide-react';
 
 
 function FadeIn({ children, delay = 0, x = 0, y = 30, className = '' }: { children: ReactNode; delay?: number; x?: number; y?: number; className?: string }) {
@@ -53,7 +53,7 @@ const serviceTags = [
   ['Google Business', 'Business Listings', 'Reputation'],
   ['Email Campaigns', 'Automation', 'Retention'],
 ];
-const serviceImageFiles = ["web-design.webp","seo.webp","ai-search.webp","social-media.webp","paid-ads.webp","local-seo.webp","email-marketing.webp"];
+const serviceImageFiles = ["web-design-interface-3d.webp","seo-interface-3d.webp","ai-search-interface-3d.webp","social-media-interface-3d.webp","paid-ads-interface-3d.webp","local-seo-interface-3d.webp","email-marketing-interface-3d.webp"];
 function ServicePreviewArtwork({ index }: { index: number }) {
  return <img className="service-artwork service-generated-image" src={`/images/services/${serviceImageFiles[index]}`} alt={`${services[index].title} illustration`} loading="lazy" decoding="async" />;
 }
@@ -95,6 +95,52 @@ const projects: PortfolioProject[] = [
   { title: "India Informatics", category: 'Website design', platform: 'WordPress', previewImage: '/images/portfolio/wordpress/india-informatics.webp', liveUrl: 'https://indiainformatics.net/' },
 ];
 
+type PortfolioDocument = { title: string; previewImage: string; pdfUrl: string };
+// Add approved PDF portfolios here with their preview images and same-origin PDF URLs.
+const servicePortfolioDocuments: Record<number, PortfolioDocument[]> = {
+  1: [{ title: "Pixel Growers / SEO", previewImage: "/images/portfolio-covers/seo-cover-3d.webp", pdfUrl: "/documents/pixel-growers-seo-portfolio.pdf" }], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [{ title: "Pixel Growers / Graphic Design", previewImage: "/images/graphic-portfolio/amazon-01.webp", pdfUrl: "/documents/pixel-growers-graphic-design.pdf" }],
+};
+function ServicePortfolioGallery() {
+  const [selected, setSelected] = useState<number | null>(null);
+  const [document, setDocument] = useState<PortfolioDocument | null>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const previousFocus = useRef<HTMLElement | null>(null);
+  const reduced = useReducedMotion();
+  useEffect(() => {
+    if (selected === null) return;
+    panelRef.current?.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+    headingRef.current?.focus({ preventScroll: true });
+  }, [selected, reduced]);
+  useEffect(() => {
+    if (!document) return;
+    previousFocus.current = window.document.activeElement as HTMLElement;
+    closeButtonRef.current?.focus();
+    const before = window.document.body.style.overflow;
+    window.document.body.style.overflow = 'hidden';
+    const keydown = (event: KeyboardEvent) => { if (event.key === 'Escape') setDocument(null); };
+    window.addEventListener('keydown', keydown);
+    return () => { window.document.body.style.overflow = before; window.removeEventListener('keydown', keydown); previousFocus.current?.focus(); };
+  }, [document]);
+  const labels = ['Website Development', 'SEO', 'Generative Search', 'Social Media', 'Paid Ads', 'Local Listing', 'Email Marketing', 'Graphic Design'];
+  const categories = [0, 7, 1, 2, 4, 6, 3, 5];
+  return <div className="service-portfolio-gallery">
+    <div className="portfolio-service-grid" aria-label="Explore portfolios by service">
+      {categories.map(index => { const Icon = index === 7 ? Palette : services[index].icon; return <button key={labels[index]} type="button" className={`portfolio-service-card${selected === index ? ' is-selected' : ''}`} aria-expanded={selected === index} aria-controls="selected-service-portfolio" onClick={() => { if (index === 7) window.location.assign("/graphic-design/index.html"); else if (index === 1) window.location.assign("/seo/index.html"); else setSelected(index); }}>
+        <div className="portfolio-service-art portfolio-text-cover" aria-hidden="true"><span className="portfolio-cover-label">{labels[index]}</span></div>
+        <div className="portfolio-service-card-copy"><span className="portfolio-service-icon"><Icon size={20} /></span><h3>{labels[index]}</h3><span className="portfolio-service-open" aria-hidden="true"><ArrowRight size={20} /></span></div>
+        <p>{index === 0 ? 'Explore Shopify & WordPress projects' : index === 7 ? 'Explore the design collection' : index === 1 ? 'Explore SEO case studies' : 'Explore portfolio documents'}</p>
+      </button>; })}
+    </div>
+    {selected !== null && <div id="selected-service-portfolio" ref={panelRef} className="selected-service-portfolio" role="region" aria-labelledby="selected-service-title">
+      <div className="portfolio-detail-heading"><div><span className="section-kicker">{selected === 0 ? 'LIVE WEBSITE PORTFOLIO' : 'PDF PORTFOLIO'}</span><h3 id="selected-service-title" ref={headingRef} tabIndex={-1}>{labels[selected]}</h3></div><button className="portfolio-back" type="button" onClick={() => { setSelected(null); window.document.querySelector<HTMLButtonElement>('.portfolio-service-card.is-selected')?.focus(); }}>Close gallery <X size={17}/></button></div>
+      {selected === 0 ? <ProjectCarousel /> : (servicePortfolioDocuments[selected] ?? []).length ? <div className="portfolio-document-grid">{servicePortfolioDocuments[selected].map(item => <button type="button" key={item.pdfUrl} className="portfolio-document-card" onClick={() => setDocument(item)}><img src={item.previewImage} alt={item.title} loading="lazy" /><span><FileText size={20}/>{item.title}<ArrowUpRight size={18}/></span></button>)}</div> : <div className="portfolio-awaiting"><span className="portfolio-awaiting-icon"><FileText size={30}/></span><h4>Portfolio coming soon</h4><p>We’re preparing our {labels[selected].toLowerCase()} portfolio. PDF examples will be available here soon.</p></div>}
+    </div>}
+    {document && <div className="pdf-portfolio-backdrop" onClick={() => setDocument(null)}><section className="pdf-portfolio-dialog" role="dialog" aria-modal="true" aria-labelledby="pdf-portfolio-title" onClick={event => event.stopPropagation()}><header><h3 id="pdf-portfolio-title">{document.title}</h3><a href={document.pdfUrl} target="_blank" rel="noreferrer"><Download size={18}/>Open PDF</a><button ref={closeButtonRef} type="button" aria-label="Close PDF" onClick={() => setDocument(null)}><X/></button></header><iframe src={document.pdfUrl} title={document.title}/></section></div>}
+  </div>;
+}
+
 function ProjectCarousel() {
   const [platform, setPlatform] = useState<PortfolioPlatform>('Shopify');
   const [activeIndex, setActiveIndex] = useState(0);
@@ -104,7 +150,8 @@ function ProjectCarousel() {
   const visibleSlides = projects.filter(project => project.platform === platform).map(project => ({ project, image: project.previewImage, imageIndex: 0 }));
   const activeSlide = visibleSlides[activeIndex];
   const activeProject = activeSlide.project;
-  const rotationPaused = Boolean(reducedMotion);
+  const rotationPaused = Boolean(reducedMotion || isHovered || isFocused);
+  const touchStart = useRef<number | null>(null);
 
   useEffect(() => {
     if (rotationPaused || visibleSlides.length < 2) return;
@@ -112,7 +159,7 @@ function ProjectCarousel() {
       setActiveIndex(index => (index + 1) % visibleSlides.length);
     }, 3000);
     return () => window.clearInterval(interval);
-  }, [platform, rotationPaused, visibleSlides.length]);
+  }, [platform, rotationPaused, visibleSlides.length, activeIndex]);
 
   const selectPlatform = (nextPlatform: PortfolioPlatform) => {
     setPlatform(nextPlatform);
@@ -131,12 +178,14 @@ function ProjectCarousel() {
     }
   };
 
-  return <div className="portfolio-carousel" onKeyDown={handleKeyDown} aria-label={`${platform} portfolio`}>
+  return <div className="portfolio-carousel" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} onFocusCapture={() => setIsFocused(true)} onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget as Node)) setIsFocused(false); }} onKeyDown={handleKeyDown} aria-label={`${platform} portfolio`}>
     <div className="portfolio-tabs" role="tablist" aria-label="Filter portfolio by platform">
       {(['Shopify', 'WordPress'] as const).map(option => <button key={option} type="button" role="tab" aria-selected={platform === option} className={`portfolio-tab${platform === option ? ' is-active' : ''}`} onClick={() => selectPlatform(option)} aria-label={`Show ${option} projects`} title={option}>{option === 'Shopify' ? <svg viewBox="0 0 48 48" className="portfolio-platform-icon shopify-icon" aria-hidden="true"><path fill="#95bf47" d="M10 12 34 8l6 34-33 3z"/><path fill="#5e8e3e" d="m34 8 7 4 3 29-4 1z"/><path d="M16 14C16 1 30 0 30 11M21 13C21 3 34 2 34 10" fill="none" stroke="#95bf47" strokeWidth="2.5"/><path d="M29 19c-2-1-5-1-6 1-2 3 5 4 4 9-1 5-6 7-11 4l1-5c3 2 5 2 5 0 1-2-6-3-5-8 1-5 6-8 13-5z" fill="#fff"/></svg> : <svg viewBox="0 0 48 48" className="portfolio-platform-icon wordpress-icon" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#21759b"/><circle cx="24" cy="24" r="18.5" fill="none" stroke="white" strokeWidth="1.3"/><text x="24" y="36" fill="white" textAnchor="middle" fontFamily="Georgia, serif" fontSize="35" fontWeight="bold">W</text></svg>}</button>)}
     </div>
-    <div className="portfolio-stage" role="tabpanel" aria-label={`${activeProject.title} preview ${activeSlide.imageIndex + 1}, ${activeIndex + 1} of ${visibleSlides.length}`}>
+    <div className="portfolio-stage" onTouchStart={event => { touchStart.current = event.touches[0].clientX; }} onTouchEnd={event => { if (touchStart.current !== null) { const distance = event.changedTouches[0].clientX - touchStart.current; if (Math.abs(distance) > 45) moveSlide(distance < 0 ? 1 : -1); } touchStart.current = null; }} role="tabpanel" aria-label={`${activeProject.title} preview ${activeSlide.imageIndex + 1}, ${activeIndex + 1} of ${visibleSlides.length}`}>
       <div className="portfolio-depth-glow" aria-hidden="true" />
+      <button type="button" className="portfolio-stage-arrow previous" onClick={() => moveSlide(-1)} aria-label="Previous website preview"><ChevronLeft /></button>
+      <button type="button" className="portfolio-stage-arrow next" onClick={() => moveSlide(1)} aria-label="Next website preview"><ChevronRight /></button>
       <AnimatePresence initial={false}>
         {visibleSlides.map((slide, index) => {
           let offset = index - activeIndex;
@@ -248,8 +297,10 @@ function App() {
         setDialog(null);
       }
       if (event.key === 'Tab') {
-        event.preventDefault();
-        closeRef.current?.focus();
+        const items = Array.from(document.querySelectorAll<HTMLElement>('.modal-backdrop a[href], .modal-backdrop button')).filter(item => !item.hasAttribute('disabled'));
+        const first = items[0], last = items[items.length - 1];
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
       }
     };
     window.addEventListener('keydown', key);
@@ -259,6 +310,18 @@ function App() {
       lastFocus.current?.focus();
     };
   }, [dialog]);
+
+  useEffect(() => {
+    const followLocation = () => {
+      if (new URLSearchParams(window.location.search).has('contact')) setDialog('contact');
+      if (window.location.hash === '#projects') {
+        requestAnimationFrame(() => document.getElementById('projects')?.scrollIntoView({ block: 'start', behavior: 'instant' }));
+      }
+    };
+    followLocation();
+    window.addEventListener('hashchange', followLocation);
+    return () => window.removeEventListener('hashchange', followLocation);
+  }, []);
 
   const contact = () => setDialog('contact');
   const closeDialog = () => setDialog(null);
@@ -384,7 +447,7 @@ function App() {
               { title: 'Distinctive by design', description: 'A memorable digital presence that feels unmistakably yours.', image: 'reason-design.png' },
               { title: 'A partner in your growth', description: 'Clear communication, close collaboration, and care beyond launch.', image: 'reason-partner.png' },
             ].map(({ title, description, image }, index) => <FadeIn key={title} delay={index * .1}><article className="why-reason"><div className="why-reason-icon" aria-hidden="true"><img loading="lazy" decoding="async" src={`/images/why-pixel-growers/${image}`} alt="" /></div><div className="why-reason-copy"><h3>{title}</h3><p>{description}</p></div><span className="why-reason-number">0{index + 1}</span></article></FadeIn>)}
-            <FadeIn delay={.3}><a className="why-cta" href="#contact">Let’s build something meaningful <ArrowRight size={20} /></a></FadeIn>
+            <FadeIn delay={.3}><button type="button" className="why-cta" onClick={contact}>Let’s build something meaningful <ArrowRight size={20} /></button></FadeIn>
           </div>
         </div>
       </div>
@@ -411,7 +474,7 @@ function App() {
             <AnimatePresence mode="wait" initial={false}><ServiceDetails key={activeServiceIndex} index={activeServiceIndex} /></AnimatePresence>
           </div>
         </div>
-        <div className="services-footer"><p>Not sure where to start? Let’s find the right fit.</p><a href="#contact">Talk to us <ArrowUpRight size={17} /></a></div>
+        <div className="services-footer"><p>Not sure where to start? Let’s find the right fit.</p><button type="button" onClick={contact}>Talk to us <ArrowUpRight size={17} /></button></div>
       </div>
     </section>
 
@@ -421,8 +484,8 @@ function App() {
 
     <section id="projects" className="projects">
       <div className="section-inner portfolio-inner">
-        <FadeIn><p className="section-kicker">SELECTED WORK</p><h2 className="section-title">Ideas into digital experiences.</h2><p className="section-intro">Explore selected Shopify and WordPress work. Choose a platform to browse its projects.</p></FadeIn>
-        <FadeIn delay={.12}><ProjectCarousel /></FadeIn>
+        <FadeIn><p className="section-kicker">EXPLORE OUR WORK</p><h2 className="section-title"><span className="brand-shine">Portfolios</span></h2><p className="section-intro">Explore websites, graphic design, and digital marketing. Choose a service to discover the work behind it.</p></FadeIn>
+        <FadeIn delay={.12}><ServicePortfolioGallery /></FadeIn>
       </div>
     </section>
 
@@ -474,7 +537,7 @@ function App() {
       </div>
     </section>
     <section id="team" className="studio-section team-section">
-      <div className="section-inner"><FadeIn className="team-heading"><p className="section-kicker">MEET THE PEOPLE</p><h2 className="section-title">Our team members.</h2><p className="section-intro">A close-knit crew of creative and technical minds, working together to make a difference for every client.</p></FadeIn>
+      <div className="section-inner"><FadeIn className="team-heading"><p className="section-kicker">MEET THE PEOPLE</p><h2 className="section-title">Our team <span className="brand-shine">members.</span></h2><p className="section-intro">A close-knit crew of creative and technical minds, working together to make a difference for every client.</p></FadeIn>
         <div className="team-grid">{team.map(({ name, role, image }, index) => <FadeIn key={name} delay={index * .08}><article className="team-card"><span className="team-index">0{index + 1}</span><div className="team-portrait-wrap">{image ? <img loading="lazy" decoding="async" className="team-portrait team-photo" src={image} alt={name} /> : <div className="team-portrait team-monogram" aria-hidden="true">{name.split(' ').map(part => part[0]).join('')}</div>}</div><h3>{name}</h3><p>{role}</p><span className="team-card-accent" aria-hidden="true" /></article></FadeIn>)}</div>
       </div>
     </section>
@@ -483,7 +546,7 @@ function App() {
       <div className="worldwide-layout">
         <FadeIn>
           <p className="section-kicker"><Globe2 size={16} /> WORLDWIDE WORK</p>
-          <h2 className="section-title">Good work knows no borders.</h2>
+          <h2 className="section-title">Good work knows no <span className="brand-shine">borders.</span></h2>
           <p className="section-intro">At Pixel Growers, our reach extends across the globe, collaborating with clients from diverse corners of the world. We work with businesses in <strong>THE UNITED STATES</strong>, <strong>CANADA</strong>, <strong>THE UNITED KINGDOM</strong>, <strong>THE UAE</strong>, <strong>INDIA</strong>, <strong>CHINA</strong>, and <strong>AUSTRALIA</strong>. Through seamless communication and a commitment to excellence, we transcend geographical barriers to deliver solutions that drive success.</p>
           <div className="country-list">{['United States', 'Canada', 'United Kingdom', 'The UAE', 'India', 'China', 'Australia'].map(country => <span key={country}><MapPin size={15} /><strong>{country}</strong></span>)}</div>
         </FadeIn>
@@ -526,6 +589,7 @@ function App() {
 }
 
 export default App;
+
 
 
 

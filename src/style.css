@@ -562,3 +562,97 @@ footer { gap: 32px; flex-wrap: wrap; padding: 42px 40px; border-color: #bc30eb35
  .footer-contact { width: 100%; min-width: 0; overflow-wrap: anywhere; }
  .country-list { gap: 10px; }
 }
+/* Service portfolio entry cards and PDF collections. */
+.service-portfolio-gallery { margin-top: 32px; }
+.portfolio-service-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
+.portfolio-service-card { min-width: 0; overflow: hidden; padding: 0 0 22px; border: 1px solid #9c4eb64a; border-radius: 18px; background: #140c1c; text-align: left; transition: transform .2s, border-color .2s, box-shadow .2s; }
+.portfolio-service-card:hover { transform: translateY(-4px); border-color: #d16bff; box-shadow: 0 15px 38px #0005; }
+.portfolio-service-card.is-selected { border-color: #d16bff; box-shadow: 0 0 0 1px #d16bff55; }
+.portfolio-service-art { position: relative; aspect-ratio: 2.18/1; overflow: hidden; background: #100b1b; }
+.portfolio-service-art img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.portfolio-format-badge { position: absolute; top: 12px; left: 12px; padding: 6px 9px; border: 1px solid #dbc2e83b; border-radius: 999px; color: #ead9f3; background: #100b1bd9; font-size: .58rem; letter-spacing: .1em; }
+.portfolio-service-card-copy { display: flex; align-items: center; gap: 10px; padding: 20px 18px 0; }
+.portfolio-service-card h3 { margin: 0; color: #f7effc; font-size: 1.05rem; letter-spacing: -.025em; line-height: 1.3; }
+.portfolio-service-card h3::after { display: none; }
+.portfolio-service-icon { display: inline-flex; color: #d276f8; }
+.portfolio-service-open { display: inline-flex; margin-left: auto; color: #d276f8; }
+.portfolio-service-card>p { padding: 9px 18px 0; color: #ad9bb8; font-size: .76rem; line-height: 1.5; }
+.selected-service-portfolio { margin-top: 36px; padding-top: 28px; border-top: 1px solid #c45ef344; scroll-margin-top: 30px; }
+.portfolio-detail-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 24px; }
+.portfolio-detail-heading h3 { font-size: clamp(1.6rem,3vw,2.4rem); font-weight: 600; margin-top: 8px; }
+.portfolio-detail-heading h3::after { display: none; }
+.portfolio-back { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border: 1px solid #bd6bd858; border-radius: 999px; background: #21132c; font-size: .75rem; }
+.portfolio-awaiting { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 310px; padding: 40px 24px; border: 1px dashed #b965d557; border-radius: 20px; background: radial-gradient(ellipse at 50% 0%,#9326c91f,transparent 65%),#120c19; text-align: center; }
+.portfolio-awaiting-icon { display: grid; place-items: center; width: 64px; height: 64px; margin-bottom: 20px; border: 1px solid #d175f054; border-radius: 18px; background: #ab38d51a; color: #d581f9; }
+.portfolio-awaiting h4 { font-size: 1.5rem; font-weight: 500; }
+.portfolio-awaiting p { max-width: 430px; margin-top: 12px; font-size: .95rem; color: #baacc5; line-height: 1.65; }
+.portfolio-awaiting-note { margin-top: 24px; color: #917b9d; font-size: .7rem; }
+.portfolio-document-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+.portfolio-document-card { overflow: hidden; border: 1px solid #a754c46b; border-radius: 16px; background: #180e20; text-align: left; }
+.portfolio-document-card img { display: block; width: 100%; aspect-ratio: 16/9; object-fit: contain; }
+.portfolio-document-card>span { display: flex; align-items: center; gap: 12px; padding: 18px; }
+.pdf-portfolio-backdrop { position: fixed; inset: 0; z-index: 100; background: #000c; display: grid; place-items: center; padding: 24px; }
+.pdf-portfolio-dialog { width: min(1100px,100%); height: 90svh; border: 1px solid #ba64d87a; border-radius: 18px; overflow: hidden; background: #140d1d; display: flex; flex-direction: column; }
+.pdf-portfolio-dialog header { display: flex; align-items: center; gap: 18px; padding: 16px 20px; }
+.pdf-portfolio-dialog header h3 { flex: 1; font-size: 1rem; }
+.pdf-portfolio-dialog header h3::after { display: none; }
+.pdf-portfolio-dialog header a { display: flex; align-items: center; gap: 8px; font-size: .8rem; }
+.pdf-portfolio-dialog header button { display: grid; place-items: center; background: none; border: 0; padding: 6px; }
+.pdf-portfolio-dialog iframe { flex: 1; width: 100%; border: 0; background: #fff; }
+@media(max-width:900px) { .portfolio-service-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; } }
+@media(max-width:600px) { .portfolio-service-grid { grid-template-columns: 1fr; gap: 18px; } .portfolio-service-card { padding-bottom: 18px; } .portfolio-service-card h3 { font-size: 1.1rem; } .portfolio-detail-heading { align-items: flex-start; flex-direction: column; } .portfolio-document-grid { grid-template-columns: 1fr; } .pdf-portfolio-backdrop { padding: 10px; } .pdf-portfolio-dialog header { gap: 10px; padding: 12px; } .portfolio-awaiting { min-height: 280px; } }
+@media(prefers-reduced-motion:reduce) { .portfolio-service-card { transition: none; } }
+.graphic-portfolio-cover { position: relative; height: 100%; overflow: hidden; background: radial-gradient(ellipse at 80% 10%,#a54dce55,transparent 60%),#130b20; }
+.graphic-cover-type { position: absolute; top: 8%; left: 14%; font-family: Georgia,serif; font-size: clamp(70px,8vw,110px); font-style: italic; color: #edcdff; letter-spacing: -.1em; line-height: 1; transform: rotate(-8deg); }
+.graphic-cover-palette { display: flex; position: absolute; right: 13%; top: 26%; gap: 5px; transform: rotate(14deg); }
+.graphic-cover-palette i { width: 24px; height: 74px; border: 1px solid #ffffff40; border-radius: 5px; background: #a331dc; }
+.graphic-cover-palette i:nth-child(2) { background: #df95ff; }.graphic-cover-palette i:nth-child(3) { background: #f5e8ff; }.graphic-cover-palette i:nth-child(4) { background: #512075; }
+.graphic-portfolio-cover>svg { position: absolute; bottom: 16%; right: 20%; color: #e6afff; }
+.graphic-cover-orbit { position: absolute; width: 85%; height: 75%; border: 1px solid #a54dd655; border-radius: 50%; left: 8%; top: 15%; transform: rotate(-15deg); }
+.portfolio-service-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+.portfolio-service-card-copy { padding-inline: 14px; gap: 8px; }
+.portfolio-service-card h3 { font-size: .95rem; }
+.portfolio-service-card>p { padding-inline: 14px; }
+@media(max-width:1100px) { .portfolio-service-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width:600px) { .portfolio-service-grid { grid-template-columns: 1fr; } .graphic-cover-type { font-size: 100px; } }
+
+/* Shared contact actions and visible manual portfolio navigation. */
+.why-cta{border:0;background:none;padding:0;cursor:pointer;font-family:inherit;text-align:left}
+.services-footer>button{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border:1px solid #bd35f4;border-radius:999px;color:#d47afa;background:transparent;font:inherit;font-weight:600;cursor:pointer}
+.services-footer>button:hover{background:#a925f12b;color:white}
+#projects{scroll-margin-top:110px}
+.portfolio-stage{touch-action:pan-y}
+.portfolio-stage-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:30;display:grid;place-items:center;width:48px;height:48px;border:1px solid #d878ff99;border-radius:50%;background:#180c24e8;color:#fff;cursor:pointer;box-shadow:0 8px 24px #0008}
+.portfolio-stage-arrow.previous{left:10px}.portfolio-stage-arrow.next{right:10px}.portfolio-stage-arrow:hover{background:#8225b3}
+@media(max-width:600px){.portfolio-stage-arrow{width:40px;height:40px}.portfolio-stage-arrow.previous{left:4px}.portfolio-stage-arrow.next{right:4px}}
+
+/* Black and white editorial surfaces; purple is a brand accent rather than a wash. */
+:root{--brand-black:#0b0c0d;--brand-purple:#a657cb;--brand-purple-deep:#74358e}
+html,body,#root,main{background:#0b0c0d}.pixel-hero-background{filter:none;background-color:#0b0c0d}.hero-heading{background-image:none;color:#fff}.hero-rotating-item{color:#c797df;background:none;-webkit-text-fill-color:#c797df;filter:none;animation:none}
+.consultation-cta{color:#fff;background:#8736aa;border-color:#b276ce;box-shadow:none;animation:none}.consultation-cta:hover{background:#a050bf;box-shadow:none}.contact-button{background:#8736aa;box-shadow:none}
+.shining-word,.about-topline .section-title span.shining-word,.why-showcase .section-title span.shining-word,.services-heading .section-title span.shining-word,.client-story-heading .section-title span.shining-word{background:none!important;filter:none;animation:none!important;-webkit-text-fill-color:currentColor}
+.partners-marquee{background:#111214;border-color:#d8d8d4}.partners-group img{filter:none}
+.about-section{background:#111214;color:#f1f1f3}.about-section .section-title,.about-topline .section-title span.shining-word,.about-detail h3{color:#f1f1f3}.about-detail p{color:#aaaab0}.about-disciplines{color:#aaaab0}.about-disciplines i{background:#bbb}.about-visual{border-color:#45454a}.about-visual img{filter:none}.about-cta{color:#c49bd7}.about-section .section-kicker{color:#c49bd7}
+.why-section{background:#111214}.why-reason{background:transparent;border-color:#404044}.why-reason h3{color:#f4f4f5}.why-reason p,.why-showcase .section-intro{color:#b2b2b6}.why-orbit-art img,.why-reason-icon img{filter:none}.why-reason-icon{background:#222;border-color:#444;box-shadow:none}.why-reason-number{color:#aaaab0}.why-cta{color:#c4a3d4}.why-kicker-dot{background:#b57acb;box-shadow:none}
+.studio-section.services{background:#111214;color:#f1f1f3}.services .section-title,.services-heading .section-title span.shining-word{color:#f1f1f3}.services .section-kicker{color:#c49bd7}.services-heading-copy{color:#aaaab0}.service-option{background:transparent;border-color:#45454a;color:#f1f1f3}.service-option:hover{background:#111214}.service-option.is-active{background:#171717;border-color:#171717;color:#fff;box-shadow:none}.service-option-title{color:inherit}.service-option-index{color:#aaaab0}.service-option.is-active .service-option-index{color:#ccc}.service-option-arrow{background:transparent;border-color:#aaa;color:inherit}.service-preview{background:#1b1c1e;border-color:#45454a;box-shadow:none}.service-preview-content{color:#f1f1f3;background:#1b1c1e}.service-preview-content h3{color:#f1f1f3}.service-preview-content p{color:#aaaab0}.service-generated-image{filter:none;background:#151515}.service-preview-content .service-tag{background:#111214;color:#aaaab0;border-color:#45454a}.services-footer{border-color:#45454a;color:#aaaab0}.services-footer>button{color:#c49bd7;border-color:#aaa}
+.projects{background:#101113}.portfolio-service-card{background:#1b1c1e;border-color:#454549;box-shadow:none}.portfolio-service-card:hover{background:#252628;border-color:#888}.portfolio-service-art>img{filter:none}.portfolio-service-art{background:#151618}.portfolio-format-badge{background:#161616df;border-color:#777;color:#eee}.graphic-portfolio-cover{filter:none}.portfolio-service-icon{color:#c5c5c8;background:#303134;border-color:#555}.portfolio-service-card-copy h3{color:#eee}.portfolio-service-card>p{color:#aaa}.portfolio-service-open{color:#ccc}.selected-service-portfolio{background:#17181a;border-color:#444}.portfolio-preview-card{border-color:#777;box-shadow:0 22px 55px #0008}.portfolio-preview-card.is-active{border-color:#aaa;box-shadow:0 24px 60px #0009}.portfolio-depth-glow{background:radial-gradient(ellipse,#ffffff13,transparent 70%)}.portfolio-stage-arrow,.portfolio-arrow{background:#242426;border-color:#777}.portfolio-stage-arrow:hover,.portfolio-arrow:hover{background:#444}.portfolio-live-link{color:#c9a5db}.portfolio-tabs .portfolio-tab.is-active{border-color:#999;background:#ffffff0d;box-shadow:none}
+.testimonials-section{background:#111214;color:#f1f1f3}.testimonials-section .section-title,.client-story-heading .section-title span.shining-word{color:#f1f1f3}.client-story-intro{color:#aaaab0}.client-review-featured{background:transparent;border-color:#45454a}.client-review-quote{color:#f1f1f3}.client-review-quote strong{color:#f1f1f3}.client-review-quote-mark{color:#c4c4be}.client-review-byline strong{color:#f1f1f3}.client-review-byline small{color:#aaaab0}.client-review-avatar{background:#e2e2dd;color:#aaaab0;border-color:#bbb}.client-review-expand,.client-reviews-more{color:#c49bd7}.client-review-nav,.client-review-pause{background:#1b1c1e;color:#f1f1f3;border-color:#45454a}.client-review-count{color:#aaaab0}.client-review-progress-track{background:#d4d4ce}.client-review-progress-fill{background:#8b51a5}.client-story-cta{border-color:#45454a;color:#f1f1f3}.client-story-cta strong{color:#f1f1f3}.client-story-cta>button{background:#171717;color:white;border-color:#171717}
+.team-section{background:#111214}.team-card{background:#202123;border-color:#46464a}.team-card:hover{background:#2a2b2d;border-color:#777}.team-index{color:#999}.team-portrait-wrap{background:#666;border-color:#aaa;box-shadow:none}.team-portrait{border-color:#222}.team-photo{filter:none}.team-card-accent{background:#888;box-shadow:none}.team-card p{color:#aaa}
+.worldwide-section{background:#111214;color:#f1f1f3}.worldwide-section .section-title{color:#f1f1f3}.worldwide-section p{color:#aaaab0}.worldwide-section strong{color:#f1f1f3}.worldwide-section .world-map,.worldwide-section svg{filter:none}footer{background:#0b0c0d;border-color:#333}.modal{background:#191a1c;border-color:#666}
+
+.partners-marquee{background:#151618;border-color:#ffffff26}
+.service-preview-content span{color:#b9b9bf}.service-preview-content .service-tags span{background:#252629;border-color:#555;color:#c5c5ca}
+.service-option-number{color:#9b9ba2}.testimonials-section .section-kicker{color:#c49bd7}
+.worldwide-section .section-intro strong{color:#eee}.worldwide-section .map-pin{filter:none;color:#c49bd7}.worldwide-section .map-pin span{color:#eee}.worldwide-section .map-pin svg{stroke:#eee}
+.worldwide-section .world-map{filter:none}.service-option.is-active{background:#303135;border-color:#777}.service-option.is-active .service-option-title{color:#fff}
+
+.service-preview-image{height:auto;aspect-ratio:4/3;background:#17181a}.service-preview-image::after{display:none}.service-generated-image{object-fit:contain;object-position:center;background:#17181a}
+
+/* Shared heading system is imported by App.tsx after the base stylesheet. */
+
+.portfolio-service-art{aspect-ratio:16/9;height:auto;background:#ddd}.portfolio-service-art>img{height:100%;width:100%;object-fit:contain;filter:none}.portfolio-service-card:has(.graphic-portfolio-cover) .portfolio-service-art{background:#21122d}
+
+.portfolio-service-art.portfolio-text-cover{display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;height:auto;min-height:145px;padding:25px;background:#17131d;border-bottom:1px solid #77449366}
+.portfolio-cover-label{display:block;font-family:Graphik,Arial,sans-serif;font-weight:700;font-size:clamp(23px,2.7vw,39px);line-height:1.22;text-align:center;color:#e1b1ff;max-width:100%;overflow-wrap:normal}
+.portfolio-service-card-copy h3{font-weight:700!important;line-height:1.3;overflow:visible!important;min-width:0}
+.portfolio-service-card-copy{min-width:0}.portfolio-service-card{overflow:visible}.portfolio-service-art{border-radius:17px 17px 0 0}

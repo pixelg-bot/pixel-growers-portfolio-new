@@ -1,0 +1,62 @@
+{
+  "Google Trends": {
+    "path": "/images/seo-portfolio/icons/googletrends.svg",
+    "color": "#4285f4",
+    "source": "labeled tool emblem"
+  },
+  "Semrush": {
+    "path": "/images/seo-portfolio/icons/semrush.svg",
+    "color": "#ff642d",
+    "source": "vector logo"
+  },
+  "Google Search Console": {
+    "path": "/images/seo-portfolio/icons/googlesearchconsole.svg",
+    "color": "#78a8ff",
+    "source": "vector logo"
+  },
+  "Google Analytics": {
+    "path": "/images/seo-portfolio/icons/googleanalytics.svg",
+    "color": "#f9ab00",
+    "source": "vector logo"
+  },
+  "WordPress": {
+    "path": "/images/seo-portfolio/icons/wordpress.svg",
+    "color": "#42a9d0",
+    "source": "vector logo"
+  },
+  "Looker Studio": {
+    "path": "/images/seo-portfolio/icons/looker.svg",
+    "color": "#6d9aff",
+    "source": "vector logo"
+  },
+  "ChatGPT": {
+    "path": "/images/seo-portfolio/icons/openai.svg",
+    "color": "#70cfa8",
+    "source": "labeled tool emblem"
+  },
+  "Claude": {
+    "path": "/images/seo-portfolio/icons/claude.svg",
+    "color": "#df9d83",
+    "source": "vector logo"
+  },
+  "Perplexity": {
+    "path": "/images/seo-portfolio/icons/perplexity.svg",
+    "color": "#66bfc6",
+    "source": "vector logo"
+  },
+  "NotebookLM": {
+    "path": "/images/seo-portfolio/icons/notebooklm.svg",
+    "color": "#e6e0ff",
+    "source": "vector logo"
+  },
+  "Semrush Academy": {
+    "path": "/images/seo-portfolio/icons/semrush.svg",
+    "color": "#ff642d",
+    "source": "vector logo"
+  },
+  "HubSpot": {
+    "path": "/images/seo-portfolio/icons/hubspot.svg",
+    "color": "#ff7a59",
+    "source": "vector logo"
+  }
+}
