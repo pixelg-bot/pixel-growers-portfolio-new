@@ -38,7 +38,7 @@ function CountUp({ target }: { target: number }) {
 const services: { title: string; description: string; icon: LucideIcon }[] = [
   { title: 'Web Design & Development', description: 'User-friendly, responsive websites and e-commerce experiences designed to make your business stand out and turn visits into action.', icon: Monitor },
   { title: 'Search Engine Optimization', description: 'Build sustainable visibility in traditional search with technical improvements, useful content, and a clear SEO strategy.', icon: Search },
-  { title: 'Generative Search Optimization', description: 'Help your brand become easier to discover and understand across emerging AI-powered search experiences.', icon: Sparkles },
+  { title: 'Generative Engine Optimization', description: 'Make your expertise easier to understand, verify and discover in AI-generated answers through clear content, consistent brand information and citation research.', icon: Sparkles },
   { title: 'Social Media Marketing', description: 'Create a consistent social presence with thoughtful content, community engagement, and campaigns built around your audience.', icon: Share2 },
   { title: 'PPC & Paid Advertising', description: 'Plan and optimize paid campaigns to reach the right people, make budgets work harder, and generate measurable leads.', icon: MousePointerClick },
   { title: 'Local Listing', description: 'Keep your business details accurate and visible across local search and listings where nearby customers look for you.', icon: MapPin },
@@ -123,14 +123,15 @@ function ServicePortfolioGallery() {
     window.addEventListener('keydown', keydown);
     return () => { window.document.body.style.overflow = before; window.removeEventListener('keydown', keydown); previousFocus.current?.focus(); };
   }, [document]);
-  const labels = ['Website Development', 'SEO', 'Generative Search', 'Social Media', 'Paid Ads', 'Local Listing', 'Email Marketing', 'Graphic Design'];
+  const labels = ['Website Development', 'SEO', 'GenAI', 'Social Media', 'Paid Ads', 'Local Listing', 'Email Marketing', 'Graphic Design'];
   const categories = [0, 7, 1, 2, 4, 6, 3, 5];
+  const covers = ['website-development', 'seo', 'genai', 'social-media', 'paid-ads', 'local-listing', 'email-marketing', 'graphic-design'];
   return <div className="service-portfolio-gallery">
     <div className="portfolio-service-grid" aria-label="Explore portfolios by service">
-      {categories.map(index => { const Icon = index === 7 ? Palette : services[index].icon; return <button key={labels[index]} type="button" className={`portfolio-service-card${selected === index ? ' is-selected' : ''}`} aria-expanded={selected === index} aria-controls="selected-service-portfolio" onClick={() => { if (index === 7) window.location.assign("/graphic-design/index.html"); else if (index === 1) window.location.assign("/seo/index.html"); else setSelected(index); }}>
-        <div className="portfolio-service-art portfolio-text-cover" aria-hidden="true"><span className="portfolio-cover-label">{labels[index]}</span></div>
+      {categories.map(index => { const Icon = index === 7 ? Palette : services[index].icon; return <button key={labels[index]} type="button" className={`portfolio-service-card${selected === index ? ' is-selected' : ''}`} aria-expanded={selected === index} aria-controls="selected-service-portfolio" onClick={() => { if (index === 7) window.location.assign("/graphic-design/index.html"); else if (index === 1) window.location.assign("/seo/index.html"); else if (index === 2) window.location.assign("/genai/index.html"); else if (index === 4) window.location.assign("/paid-ads/index.html"); else if (index === 6) window.location.assign("/email-marketing/index.html"); else setSelected(index); }}>
+        <div className="portfolio-service-art portfolio-uploaded-cover" aria-hidden="true"><img src={`/images/portfolio-covers/${covers[index]}-uploaded.webp`} srcSet={`/images/portfolio-covers/${covers[index]}-uploaded-small.webp 800w, /images/portfolio-covers/${covers[index]}-uploaded.webp 1600w`} sizes="(max-width: 600px) 90vw, (max-width: 1100px) 44vw, 22vw" width="1600" height="893" alt="" loading="lazy" decoding="async" /></div>
         <div className="portfolio-service-card-copy"><span className="portfolio-service-icon"><Icon size={20} /></span><h3>{labels[index]}</h3><span className="portfolio-service-open" aria-hidden="true"><ArrowRight size={20} /></span></div>
-        <p>{index === 0 ? 'Explore Shopify & WordPress projects' : index === 7 ? 'Explore the design collection' : index === 1 ? 'Explore SEO case studies' : 'Explore portfolio documents'}</p>
+        <p>{index === 0 ? 'Explore Shopify & WordPress projects' : index === 7 ? 'Explore the design collection' : index === 1 ? 'Explore SEO case studies' : index === 2 ? 'Explore our GEO approach & demonstrations' : index === 4 ? 'Explore six paid advertising channels' : index === 6 ? 'Explore email design collections' : 'Explore portfolio documents'}</p>
       </button>; })}
     </div>
     {selected !== null && <div id="selected-service-portfolio" ref={panelRef} className="selected-service-portfolio" role="region" aria-labelledby="selected-service-title">

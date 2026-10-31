@@ -1,0 +1,492 @@
+[
+  {
+    "id": "meta-tax-2025",
+    "name": "Tax return leads",
+    "group": "Meta",
+    "channel": "Meta Ads \u00b7 Australia \u00b7 Jan\u2013Apr 2025",
+    "headline": "Six form-generation campaigns for a tax-return service.",
+    "summary": "Audience refinement and exclusions, supported by feedback from the team handling enquiries.",
+    "work": "Six form-generation campaigns for a tax-return service.",
+    "image": "meta-tax-2025",
+    "imagefile": "meta-tax-2025.jpg",
+    "alt": "Tax return leads original campaign report",
+    "metrics": [
+      [
+        "6,457",
+        "Leads"
+      ],
+      [
+        "$4.49",
+        "Per lead"
+      ],
+      [
+        "$28,965.98",
+        "Ad cost"
+      ]
+    ],
+    "note": "Jan 1-Apr 23, 2025. Form submissions are not confirmed customers; the report does not identify the dollar currency."
+  },
+  {
+    "id": "meta-camping-2023",
+    "name": "Camping equipment",
+    "group": "Meta",
+    "channel": "Meta Ads \u00b7 Australia \u00b7 Jul 2023",
+    "headline": "Acquisition and returning-shopper campaigns for camping retail.",
+    "summary": "Prospecting and product remarketing connected new shoppers with items they had considered.",
+    "work": "Acquisition and returning-shopper campaigns for camping retail.",
+    "image": "meta-camping-2023",
+    "imagefile": "meta-camping-2023-clean.png",
+    "alt": "Camping equipment recreated report summary from supplied campaign figures",
+    "metrics": [
+      [
+        "45.75x",
+        "Best sales value / ad cost"
+      ],
+      [
+        "219",
+        "Purchases"
+      ],
+      [
+        "A$45,385",
+        "Purchase value"
+      ]
+    ],
+    "note": "Jul 1-18, 2023. 45.75x belongs to the best campaign, not the account average. Sales value is not profit.",
+    "recreated": true
+  },
+  {
+    "id": "ecommerce-google-meta",
+    "name": "E-commerce ad reports",
+    "group": "Mixed",
+    "channel": "E-commerce \u00b7 Advertising reports",
+    "headline": "Read each report independently rather than combining potentially overlapping sales.",
+    "summary": "Separate advertising views show recorded value, ad costs and Meta purchases.",
+    "work": "Read each report independently rather than combining potentially overlapping sales.",
+    "image": "ecommerce-google-meta",
+    "imagefile": "ecommerce-google-meta-clean.png",
+    "alt": "E-commerce ad reports recreated report summary from supplied campaign figures",
+    "metrics": [
+      [
+        "\u00a377,448",
+        "Value in one report"
+      ],
+      [
+        "12.65x",
+        "Recorded value / ad cost"
+      ],
+      [
+        "\u00a36,122",
+        "Ad cost in that report"
+      ]
+    ],
+    "note": "Dates and platform labels are incomplete in the upper reports. 12.65x relates only to the top-left view; the Meta view is separate.",
+    "recreated": true
+  },
+  {
+    "id": "meta-safety-equipment-2024",
+    "name": "Safety equipment",
+    "group": "Meta",
+    "channel": "Meta Ads \u00b7 UK \u00b7 1\u201324 Jan 2024",
+    "headline": "Four Meta campaigns with separate purchase and sales-value records.",
+    "summary": "Catalog, stock-availability and audience campaigns supported product purchases.",
+    "work": "Four Meta campaigns with separate purchase and sales-value records.",
+    "image": "meta-safety-equipment-2024",
+    "imagefile": "meta-safety-equipment-2024-clean.png",
+    "alt": "Safety equipment recreated report summary from supplied campaign figures",
+    "metrics": [
+      [
+        "312",
+        "Purchases reported by Meta"
+      ],
+      [
+        "\u00a312,132",
+        "Sales value reported by Meta"
+      ],
+      [
+        "5.44x",
+        "Best campaign sales value / ad cost"
+      ]
+    ],
+    "note": "Jan 1-24, 2024. 5.44x is one campaign, not a blended return. Reported sales value does not account for product costs or refunds.",
+    "recreated": true
+  },
+  {
+    "id": "meta-car-dealership-2022",
+    "name": "Car dealership",
+    "group": "Meta",
+    "channel": "Meta Ads \u00b7 December 2022",
+    "headline": "Six ads; four contributed the recorded form submissions.",
+    "summary": "Lead forms gave prospective buyers a direct route to enquire about vehicles.",
+    "work": "Six ads; four contributed the recorded form submissions.",
+    "image": "meta-car-dealership-2022",
+    "imagefile": "meta-car-dealership-2022-clean.png",
+    "alt": "Car dealership recreated report summary from supplied campaign figures",
+    "metrics": [
+      [
+        "295",
+        "Facebook form submissions"
+      ],
+      [
+        "$6.44",
+        "Per lead"
+      ],
+      [
+        "62,880",
+        "Times the ads were shown"
+      ]
+    ],
+    "note": "Dec 1-31, 2022. These are enquiries, not vehicle sales. The dollar currency is not specified.",
+    "recreated": true
+  },
+  {
+    "id": "meta-supplements-2023",
+    "name": "Supplement retail",
+    "group": "Meta",
+    "channel": "Meta Ads \u00b7 Canada \u00b7 1 Jan\u201311 Jul 2023",
+    "headline": "Campaign-level returns are shown alongside their combined recorded sales value.",
+    "summary": "Two sales-focused campaigns tracked ad investment and attributed purchase value.",
+    "work": "Campaign-level returns are shown alongside their combined recorded sales value.",
+    "image": "meta-supplements-2023",
+    "imagefile": "meta-supplements-2023-clean.png",
+    "alt": "Supplement retail recreated report summary from supplied campaign figures",
+    "metrics": [
+      [
+        "4.24\u20134.79x",
+        "Sales value / ad cost"
+      ],
+      [
+        "$408,628",
+        "Sales value reported by Meta"
+      ],
+      [
+        "$88,079",
+        "Ad cost for two campaigns"
+      ]
+    ],
+    "note": "Jan 1-Jul 11, 2023. The second campaign mixes action types; purchase counts cannot be combined. Currency code is not shown.",
+    "recreated": true
+  },
+  {
+    "id": "meta-food-truck-2023",
+    "name": "Food-truck enquiries",
+    "group": "Meta",
+    "channel": "Meta Ads \u00b7 1\u201330 Jan 2023",
+    "headline": "Daily budgets and cost per lead are distinct measures.",
+    "summary": "Two lead-form campaigns introduced custom food-truck services to prospective buyers.",
+    "work": "Daily budgets and cost per lead are distinct measures.",
+    "image": "meta-food-truck-2023",
+    "imagefile": "meta-food-truck-2023-clean.png",
+    "alt": "Food-truck enquiries recreated report summary from supplied campaign figures",
+    "metrics": [
+      [
+        "527",
+        "Facebook form submissions"
+      ],
+      [
+        "$2.71",
+        "Average cost per lead"
+      ],
+      [
+        "$1,430",
+        "Ad cost for two campaigns"
+      ]
+    ],
+    "note": "Jan 1-30, 2023. 527 forms are not confirmed orders. The blended cost uses $1,429.62 of spend; dollar currency is unspecified.",
+    "recreated": true
+  },
+  {
+    "id": "google-tax-2021",
+    "name": "Tax return search",
+    "group": "Google",
+    "channel": "Google Ads \u00b7 Australia \u00b7 Jan\u2013Jun 2021",
+    "headline": "Search demand was connected with tracked conversion actions.",
+    "summary": "Four Search campaigns used separate budgets and target acquisition costs.",
+    "work": "Search demand was connected with tracked conversion actions.",
+    "image": "google-tax-2021",
+    "imagefile": "google-tax-2021.jpg",
+    "alt": "Tax return search original campaign report",
+    "metrics": [
+      [
+        "4,622",
+        "Conversions"
+      ],
+      [
+        "A$131,687",
+        "Ad cost"
+      ],
+      [
+        "13.7\u201322.03%",
+        "Conversion rate"
+      ]
+    ],
+    "note": "Jan 1-Jun 30, 2021. Conversion definitions are not fully visible; tracked actions are not necessarily paying customers."
+  },
+  {
+    "id": "google-dish-2021",
+    "name": "Telecom search",
+    "group": "Google",
+    "channel": "Google Ads \u00b7 Caribbean \u00b7 Jan\u2013Jun 2021",
+    "headline": "Calls and attributed conversions are kept as separate reporting measures.",
+    "summary": "Search and call-focused ads provided two routes for telecom enquiries.",
+    "work": "Calls and attributed conversions are kept as separate reporting measures.",
+    "image": "google-dish-2021",
+    "imagefile": "google-dish-2021.jpg",
+    "alt": "Telecom search original campaign report",
+    "metrics": [
+      [
+        "2,130",
+        "Conversions"
+      ],
+      [
+        "7,282",
+        "Phone calls"
+      ],
+      [
+        "$12.01",
+        "Cost per conversion"
+      ]
+    ],
+    "note": "Jan 1-Jun 30, 2021. The exact conversion figure is 2,130.43; attribution can split credit. Calls may overlap with conversions."
+  },
+  {
+    "id": "google-beef-jerky-store-sales",
+    "name": "Double G Jerky",
+    "group": "Store",
+    "channel": "Store analytics \u00b7 E-commerce \u00b7 2022",
+    "headline": "Supporting commerce evidence; this report does not isolate a paid advertising channel.",
+    "summary": "Store analytics distinguish retail, wholesale and other product categories.",
+    "work": "Supporting commerce evidence; this report does not isolate a paid advertising channel.",
+    "image": "google-beef-jerky-store-sales-safe",
+    "imagefile": "google-beef-jerky-store-sales-safe.png",
+    "alt": "Double G Jerky original campaign report",
+    "metrics": [
+      [
+        "$59,468",
+        "Store net sales"
+      ],
+      [
+        "558",
+        "Store orders"
+      ],
+      [
+        "512",
+        "Retail orders"
+      ]
+    ],
+    "note": "2022 store report. The chart and annotation describe different date windows. All-source sales are not attributable Google Ads revenue; category orders can overlap."
+  },
+  {
+    "id": "linkedin-manufacturing-2024",
+    "name": "Manufacturing leads",
+    "group": "LinkedIn",
+    "channel": "LinkedIn Ads \u00b7 Oct\u2013Nov 2024",
+    "headline": "The featured campaign row is separated from the wider account header.",
+    "summary": "Sponsored Content reached manufacturing and industrial decision-makers.",
+    "work": "The featured campaign row is separated from the wider account header.",
+    "image": "linkedin-manufacturing-2024",
+    "imagefile": "linkedin-manufacturing-2024-clean.png",
+    "alt": "Manufacturing leads recreated report summary from supplied campaign figures",
+    "metrics": [
+      [
+        "24",
+        "Leads"
+      ],
+      [
+        "$67.17",
+        "Per lead"
+      ],
+      [
+        "$1,612.14",
+        "Ad cost"
+      ]
+    ],
+    "note": "Oct 13-Nov 11, 2024. Spend and 24 leads refer to one campaign; the header covers two. Lead quality and meetings are not shown.",
+    "recreated": true
+  },
+  {
+    "id": "linkedin-hr",
+    "name": "HR decision-makers",
+    "group": "LinkedIn",
+    "channel": "LinkedIn Ads \u00b7 HR",
+    "headline": "Blended acquisition cost is calculated from total spend and total leads.",
+    "summary": "Two lead campaigns engaged an HR-focused professional audience.",
+    "work": "Blended acquisition cost is calculated from total spend and total leads.",
+    "image": "linkedin-hr",
+    "imagefile": "linkedin-hr-clean.png",
+    "alt": "HR decision-makers recreated report summary from supplied campaign figures",
+    "metrics": [
+      [
+        "95",
+        "Leads"
+      ],
+      [
+        "$21.61",
+        "Average cost per lead"
+      ],
+      [
+        "$2,053.14",
+        "Ad cost"
+      ]
+    ],
+    "note": "Complete dates are not visible. These are platform leads; sales outcomes are not shown.",
+    "recreated": true
+  },
+  {
+    "id": "linkedin-eu-lead-campaigns",
+    "name": "European B2B leads",
+    "group": "LinkedIn",
+    "channel": "LinkedIn Ads \u00b7 EU \u00b7 Three lead campaigns",
+    "headline": "The three visible rows are not confused with the nine-campaign account total.",
+    "summary": "Three professional lead campaigns were assessed together using their own costs.",
+    "work": "The three visible rows are not confused with the nine-campaign account total.",
+    "image": "linkedin-eu-lead-campaigns",
+    "imagefile": "linkedin-eu-lead-campaigns.webp",
+    "alt": "European B2B leads original campaign report",
+    "metrics": [
+      [
+        "106",
+        "Leads from three campaigns"
+      ],
+      [
+        "\u20ac5,528",
+        "Ad cost for these campaigns"
+      ],
+      [
+        "\u20ac52.15",
+        "Average cost per lead"
+      ]
+    ],
+    "note": "Full dates and campaign names are partly hidden. 106 leads and the average cost refer only to the three visible campaigns."
+  },
+  {
+    "id": "linkedin-cxo-campaign-account",
+    "name": "CXO campaign account",
+    "group": "LinkedIn",
+    "channel": "LinkedIn Ads \u00b7 CXO account \u00b7 7\u201314 Mar 2017",
+    "headline": "Historical account context, with conflicting efficiency metrics left out of the headline.",
+    "summary": "An account-level record spanning senior-leader campaign groups.",
+    "work": "Historical account context, with conflicting efficiency metrics left out of the headline.",
+    "image": "linkedin-cxo-campaign-account",
+    "imagefile": "linkedin-cxo-campaign-account.webp",
+    "alt": "CXO campaign account original campaign report",
+    "metrics": [
+      [
+        "50",
+        "Campaigns listed in the account"
+      ],
+      [
+        "$57,735",
+        "Ad cost"
+      ],
+      [
+        "1.39M",
+        "Times the ads were shown"
+      ]
+    ],
+    "note": "Mar 7-14, 2017. The source click-rate and CPC values do not reconcile with totals. 50 listed campaigns were not all active; no leads or sales are shown."
+  },
+  {
+    "id": "linkedin-property-business-owners-2023",
+    "name": "Property lead campaigns",
+    "group": "LinkedIn",
+    "channel": "LinkedIn Ads \u00b7 Property \u00b7 12 Apr\u20131 May 2023",
+    "headline": "Lead generation and site traffic retain their own objectives and totals.",
+    "summary": "Separate form and website-visit campaigns addressed business owners and professionals.",
+    "work": "Lead generation and site traffic retain their own objectives and totals.",
+    "image": "linkedin-property-business-owners-2023",
+    "imagefile": "linkedin-property-business-owners-2023.webp",
+    "alt": "Property lead campaigns original campaign report",
+    "metrics": [
+      [
+        "32",
+        "Leads"
+      ],
+      [
+        "144",
+        "Website visits"
+      ],
+      [
+        "30,899",
+        "Times the ads were shown"
+      ]
+    ],
+    "note": "Apr 12-May 1, 2023. 32 leads and 144 visits are separate outcomes. The $12.89 daily spend figure is not cost per lead."
+  },
+  {
+    "id": "lv-home",
+    "name": "LV Home Service",
+    "channel": "Google Ads / Home services",
+    "headline": "More conversions. Lower acquisition cost.",
+    "summary": "Paid-search work focused on relevant enquiries, tighter targeting and conversion efficiency.",
+    "work": "Search targeting, lead-quality review and conversion optimization.",
+    "image": "lv-cost-per-conversion",
+    "alt": "Original LV Home Service Google Ads cost-per-conversion comparison",
+    "metrics": [
+      [
+        "51 \u2192 101",
+        "Reported ad conversions"
+      ],
+      [
+        "$253.25 \u2192 $66.32",
+        "Cost per conversion"
+      ]
+    ],
+    "note": "Comparison shown in the supplied report: Jun 15\u2013Sep 30, 2025 versus Oct 1, 2025\u2013Jan 31, 2026. Period lengths differ; totals are not normalized.",
+    "group": "Google",
+    "imagefile": "lv-cost-per-conversion.webp"
+  },
+  {
+    "id": "five-flavors",
+    "name": "Five Flavors Herbs",
+    "channel": "Google Ads + Meta Ads / E-commerce",
+    "headline": "Search intent meets product-led creative.",
+    "summary": "Shopping and Search campaigns connected with Display remarketing and Facebook / Instagram product promotions.",
+    "work": "Product-focused ads, audience testing and remarketing.",
+    "image": "ffh-google-report",
+    "alt": "Original Five Flavors Herbs Google Ads campaign overview",
+    "metrics": [
+      [
+        "26K",
+        "Reported Google Ads clicks"
+      ],
+      [
+        "1.85K",
+        "Reported Google Ads conversions"
+      ],
+      [
+        "$14.5K",
+        "Reported Google Ads cost"
+      ]
+    ],
+    "note": "Google Ads overview: May 1, 2024\u2013May 31, 2025. The report labels Actual ROAS as 190.48%; no multiplier has been inferred.",
+    "group": "Mixed",
+    "imagefile": "ffh-google-report.webp"
+  },
+  {
+    "id": "the-natural",
+    "name": "The Natural",
+    "channel": "Google Ads / Supplement retail",
+    "headline": "A focused paid-search campaign record.",
+    "summary": "Supplement-category searches, automated bidding and remarketing formed the paid-search approach.",
+    "work": "Purchase-intent keyword groups and returning-visitor campaigns.",
+    "image": "natural-google-overview",
+    "alt": "Original The Natural Google Ads campaign overview",
+    "metrics": [
+      [
+        "1.03K",
+        "Reported clicks"
+      ],
+      [
+        "19",
+        "Reported conversions"
+      ],
+      [
+        "$412",
+        "Reported cost per conversion"
+      ]
+    ],
+    "note": "Historical Google Ads overview: Oct 1\u201331, 2024. This is a campaign snapshot, not a before-and-after growth claim.",
+    "group": "Google",
+    "imagefile": "natural-google-overview.webp"
+  }
+]

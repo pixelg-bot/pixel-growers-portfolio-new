@@ -1,0 +1,147 @@
+[
+  {
+    "id": "meta",
+    "name": "Meta Ads",
+    "scope": "Facebook & Instagram",
+    "icon": "meta",
+    "focus": "Creative that meets the right audience.",
+    "description": "Connect the offer, the audience and the creative across Facebook and Instagram. We plan the journey from first impression to a useful next step.",
+    "formats": [
+      "Facebook",
+      "Instagram"
+    ],
+    "deliverables": [
+      "Audience and campaign structure",
+      "Creative testing matrix",
+      "Retargeting plan",
+      "Conversion measurement review"
+    ],
+    "plan": [
+      "Clarify the offer and conversion goal.",
+      "Build audience and creative test groups.",
+      "Review delivery, conversion quality and the next test."
+    ],
+    "measure": "Qualified leads, purchases, cost per result and attributed revenue where available."
+  },
+  {
+    "id": "google",
+    "name": "Google Ads",
+    "scope": "Search, Shopping, Display, YouTube & Performance Max",
+    "icon": "googleads",
+    "focus": "Capture intent. Give it direction.",
+    "description": "Build around buying intent, a relevant offer and a clear landing page. Pair automated delivery with search-term reviews and conversion-quality checks.",
+    "formats": [
+      "Search",
+      "Shopping",
+      "Display",
+      "YouTube",
+      "Performance Max"
+    ],
+    "deliverables": [
+      "Intent and campaign map",
+      "Keyword and exclusion plan",
+      "Product feed or asset brief",
+      "Landing-page and tracking review"
+    ],
+    "plan": [
+      "Prioritize high-intent searches and match the landing-page promise.",
+      "Give automation clear conversion goals, relevant assets and budget boundaries.",
+      "Review search terms, qualified leads and revenue alongside clicks and cost."
+    ],
+    "measure": "Conversion value, cost per acquisition, ROAS and lead quality as appropriate to the goal."
+  },
+  {
+    "id": "tiktok",
+    "name": "TikTok Ads",
+    "scope": "TikTok advertising",
+    "icon": "tiktok",
+    "focus": "A clear hook. A reason to keep watching.",
+    "description": "Build TikTok campaign plans around the opening hook, the message and the action. Creative testing explores different ways to explain the offer.",
+    "formats": [
+      "TikTok advertising"
+    ],
+    "deliverables": [
+      "Audience and campaign brief",
+      "Short-form creative concepts",
+      "Hook and message test plan",
+      "Event and landing-page checks"
+    ],
+    "plan": [
+      "Define the audience and the message.",
+      "Plan distinct hooks and creative variations.",
+      "Review creative response alongside actual conversion quality."
+    ],
+    "measure": "Creative engagement, conversion rate, cost per action and downstream business outcomes."
+  },
+  {
+    "id": "linkedin",
+    "name": "LinkedIn Ads",
+    "scope": "B2B lead generation",
+    "icon": "linkedin",
+    "focus": "Reach the buying team, not just a job title.",
+    "description": "Connect a relevant B2B offer with the professionals it is designed to help. Align campaign targeting, the content offer and the lead handover.",
+    "formats": [
+      "B2B lead generation"
+    ],
+    "deliverables": [
+      "Professional audience map",
+      "Offer and campaign structure",
+      "Lead form or landing-page brief",
+      "Sales-feedback reporting plan"
+    ],
+    "plan": [
+      "Agree the ideal customer and buying roles.",
+      "Align the offer with audience needs.",
+      "Review qualified leads with the sales team."
+    ],
+    "measure": "Cost per lead, lead fit, qualified opportunities and pipeline outcomes when CRM data is available."
+  },
+  {
+    "id": "pinterest",
+    "name": "Pinterest Ads",
+    "scope": "Shopping & discovery ads",
+    "icon": "pinterest",
+    "focus": "From inspiration to product discovery.",
+    "description": "Connect visual discovery with relevant products and useful destination pages. Plan shopping and discovery campaigns around the way the audience explores ideas.",
+    "formats": [
+      "Shopping",
+      "Discovery"
+    ],
+    "deliverables": [
+      "Product and audience brief",
+      "Visual creative directions",
+      "Catalog and destination checks",
+      "Discovery-to-conversion plan"
+    ],
+    "plan": [
+      "Map the product to audience interests.",
+      "Prepare relevant visuals and destination pages.",
+      "Review product discovery and conversion signals."
+    ],
+    "measure": "Product engagement, outbound visits, conversions and attributed sales where available."
+  },
+  {
+    "id": "microsoft",
+    "name": "Microsoft Ads",
+    "scope": "Bing Search & Shopping",
+    "icon": "microsoft",
+    "focus": "A focused plan for another search audience.",
+    "description": "Develop Bing Search and Shopping campaign plans with clear intent, product relevance and conversion goals. Review the channel on its own evidence.",
+    "formats": [
+      "Bing Search",
+      "Shopping"
+    ],
+    "deliverables": [
+      "Search and shopping structure",
+      "Keyword and exclusion review",
+      "Product feed checklist",
+      "Channel-specific reporting plan"
+    ],
+    "plan": [
+      "Set the channel objective and conversion goal.",
+      "Organize keywords, product data and destination pages.",
+      "Review search terms, conversion quality and spend."
+    ],
+    "measure": "Cost per acquisition, conversion value, search-term relevance and qualified outcomes."
+  }
+]

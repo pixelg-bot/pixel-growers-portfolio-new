@@ -1,0 +1,224 @@
+[
+  {
+    "id": "figma-klaviyo",
+    "name": "E-commerce Email Collection",
+    "group": "E-commerce",
+    "description": "Product stories, new arrivals and retention-focused creative across a varied set of consumer brands.",
+    "focus": "A clear visual hierarchy connects the product, the reason to care and the next action.",
+    "tags": [
+      "Product storytelling",
+      "Campaign variations",
+      "Brand consistency"
+    ],
+    "cover": "/images/email-marketing/figma-klaviyo-02-preview.jpg",
+    "position": "top",
+    "images": [
+      {
+        "full": "/images/email-marketing/figma-klaviyo-02.jpg",
+        "preview": "/images/email-marketing/figma-klaviyo-02-preview.jpg",
+        "width": 3840,
+        "height": 3840,
+        "alt": "E-commerce Email Collection \u2014 design board 1"
+      },
+      {
+        "full": "/images/email-marketing/figma-klaviyo-03.jpg",
+        "preview": "/images/email-marketing/figma-klaviyo-03-preview.jpg",
+        "width": 3840,
+        "height": 3840,
+        "alt": "E-commerce Email Collection \u2014 design board 2"
+      },
+      {
+        "full": "/images/email-marketing/figma-klaviyo-04.jpg",
+        "preview": "/images/email-marketing/figma-klaviyo-04-preview.jpg",
+        "width": 3840,
+        "height": 3840,
+        "alt": "E-commerce Email Collection \u2014 design board 3"
+      },
+      {
+        "full": "/images/email-marketing/figma-klaviyo-05.jpg",
+        "preview": "/images/email-marketing/figma-klaviyo-05-preview.jpg",
+        "width": 3840,
+        "height": 3840,
+        "alt": "E-commerce Email Collection \u2014 design board 4"
+      },
+      {
+        "full": "/images/email-marketing/figma-klaviyo-06.jpg",
+        "preview": "/images/email-marketing/figma-klaviyo-06-preview.jpg",
+        "width": 3840,
+        "height": 3840,
+        "alt": "E-commerce Email Collection \u2014 design board 5"
+      },
+      {
+        "full": "/images/email-marketing/figma-klaviyo-07.jpg",
+        "preview": "/images/email-marketing/figma-klaviyo-07-preview.jpg",
+        "width": 3840,
+        "height": 3840,
+        "alt": "E-commerce Email Collection \u2014 design board 6"
+      },
+      {
+        "full": "/images/email-marketing/figma-klaviyo-08.jpg",
+        "preview": "/images/email-marketing/figma-klaviyo-08-preview.jpg",
+        "width": 3840,
+        "height": 3840,
+        "alt": "E-commerce Email Collection \u2014 design board 7"
+      },
+      {
+        "full": "/images/email-marketing/figma-klaviyo-09.jpg",
+        "preview": "/images/email-marketing/figma-klaviyo-09-preview.jpg",
+        "width": 3840,
+        "height": 3840,
+        "alt": "E-commerce Email Collection \u2014 design board 8"
+      },
+      {
+        "full": "/images/email-marketing/figma-klaviyo-10.jpg",
+        "preview": "/images/email-marketing/figma-klaviyo-10-preview.jpg",
+        "width": 3840,
+        "height": 3840,
+        "alt": "E-commerce Email Collection \u2014 design board 9"
+      },
+      {
+        "full": "/images/email-marketing/figma-klaviyo-11.jpg",
+        "preview": "/images/email-marketing/figma-klaviyo-11-preview.jpg",
+        "width": 3840,
+        "height": 3840,
+        "alt": "E-commerce Email Collection \u2014 design board 10"
+      },
+      {
+        "full": "/images/email-marketing/figma-klaviyo-12.jpg",
+        "preview": "/images/email-marketing/figma-klaviyo-12-preview.jpg",
+        "width": 3840,
+        "height": 4099,
+        "alt": "E-commerce Email Collection \u2014 design board 11"
+      }
+    ]
+  },
+  {
+    "id": "pure-paw-labs",
+    "name": "Pure Paw Labs",
+    "group": "Pet care",
+    "description": "A cohesive email design collection for a pet-wellness brand.",
+    "focus": "Warm product imagery, useful content blocks and a consistent visual language bring the brand into the inbox.",
+    "tags": [
+      "Pet wellness",
+      "Product education",
+      "Newsletter design"
+    ],
+    "cover": "/images/email-marketing/pure-paw-labs-01-preview.png",
+    "position": "top",
+    "images": [
+      {
+        "full": "/images/email-marketing/pure-paw-labs-01.png",
+        "preview": "/images/email-marketing/pure-paw-labs-01-preview.png",
+        "width": 1400,
+        "height": 4703,
+        "alt": "Pure Paw Labs \u2014 design board 1"
+      }
+    ]
+  },
+  {
+    "id": "pet-training",
+    "name": "Pet Training App",
+    "group": "Pet care",
+    "description": "An extensive collection of email designs for a pet-training app.",
+    "focus": "Friendly imagery and structured content turn a broad set of messages into a recognizable email family.",
+    "tags": [
+      "App communication",
+      "Pet care",
+      "Campaign system"
+    ],
+    "cover": "/images/email-marketing/pet-training-cover-enhanced.png",
+    "position": "center",
+    "images": [
+      {
+        "full": "/images/email-marketing/pet-training-01.png",
+        "preview": "/images/email-marketing/pet-training-01-preview.png",
+        "width": 3840,
+        "height": 1385,
+        "alt": "Pet Training App \u2014 design board 1"
+      },
+      {
+        "full": "/images/email-marketing/pet-training-02.jpg",
+        "preview": "/images/email-marketing/pet-training-02-preview.jpg",
+        "width": 3840,
+        "height": 28486,
+        "alt": "Pet Training App \u2014 design board 2"
+      }
+    ]
+  },
+  {
+    "id": "hapvida",
+    "name": "Hapvida",
+    "group": "Healthcare",
+    "description": "A healthcare email collection with a strong blue-and-orange identity.",
+    "focus": "Campaign offers and institutional messages share a recognizable visual system while retaining their own purpose.",
+    "tags": [
+      "Healthcare",
+      "Promotional campaigns",
+      "Brand communication"
+    ],
+    "cover": "/images/email-marketing/hapvida-01-preview.png",
+    "position": "top",
+    "images": [
+      {
+        "full": "/images/email-marketing/hapvida-01.png",
+        "preview": "/images/email-marketing/hapvida-01-preview.png",
+        "width": 1600,
+        "height": 1343,
+        "alt": "Hapvida \u2014 design board 1"
+      },
+      {
+        "full": "/images/email-marketing/hapvida-03.png",
+        "preview": "/images/email-marketing/hapvida-03-preview.png",
+        "width": 1600,
+        "height": 4929,
+        "alt": "Hapvida \u2014 design board 2"
+      }
+    ]
+  },
+  {
+    "id": "klaviyo-newsletter",
+    "name": "Newsletter & Product Campaigns",
+    "group": "Newsletters",
+    "description": "A long-form collection of product-led email and newsletter designs.",
+    "focus": "A range of layouts demonstrates how product visuals, editorial sections and calls to action can work together.",
+    "tags": [
+      "Newsletter layouts",
+      "Product campaigns",
+      "Klaviyo design"
+    ],
+    "cover": "/images/email-marketing/klaviyo-newsletter-cover.png",
+    "position": "top",
+    "images": [
+      {
+        "full": "/images/email-marketing/klaviyo-newsletter-01.png",
+        "preview": "/images/email-marketing/klaviyo-newsletter-01-preview.png",
+        "width": 1920,
+        "height": 25955,
+        "alt": "Newsletter & Product Campaigns \u2014 design board 1"
+      }
+    ]
+  },
+  {
+    "id": "email-designs",
+    "name": "Editorial Email Collection",
+    "group": "E-commerce",
+    "description": "A collection of distinct email directions for different brands and offers.",
+    "focus": "Typography, photography and layout establish a different tone for each message without losing a clear reading order.",
+    "tags": [
+      "Art direction",
+      "Email campaigns",
+      "Editorial layouts"
+    ],
+    "cover": "/images/email-marketing/email-designs-01-preview.png",
+    "position": "top",
+    "images": [
+      {
+        "full": "/images/email-marketing/email-designs-01.png",
+        "preview": "/images/email-marketing/email-designs-01-preview.png",
+        "width": 2200,
+        "height": 6633,
+        "alt": "Editorial Email Collection \u2014 design board 1"
+      }
+    ]
+  }
+]

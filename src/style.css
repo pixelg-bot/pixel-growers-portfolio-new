@@ -656,3 +656,4 @@ html,body,#root,main{background:#0b0c0d}.pixel-hero-background{filter:none;backg
 .portfolio-cover-label{display:block;font-family:Graphik,Arial,sans-serif;font-weight:700;font-size:clamp(23px,2.7vw,39px);line-height:1.22;text-align:center;color:#e1b1ff;max-width:100%;overflow-wrap:normal}
 .portfolio-service-card-copy h3{font-weight:700!important;line-height:1.3;overflow:visible!important;min-width:0}
 .portfolio-service-card-copy{min-width:0}.portfolio-service-card{overflow:visible}.portfolio-service-art{border-radius:17px 17px 0 0}
+.portfolio-service-art.portfolio-uploaded-cover{display:block;aspect-ratio:2752/1536;min-height:0;padding:0;background:#151821;overflow:hidden;border-bottom:1px solid #77449366}.portfolio-uploaded-cover>img{display:block;width:100%;height:100%;object-fit:contain;filter:none}
