@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type ReactNode } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
-import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Globe2, FileText, Download, Palette, Mail, MapPin, Monitor, MousePointerClick, Pause, Play, Search, Share2, Sparkles, Star, X, type LucideIcon } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, CalendarDays, ChevronLeft, ChevronRight, Globe2, FileText, Download, Palette, Mail, MapPin, Monitor, MousePointerClick, Pause, Phone, Play, Search, Share2, Sparkles, Star, X, type LucideIcon } from 'lucide-react';
 
 
 function FadeIn({ children, delay = 0, x = 0, y = 30, className = '' }: { children: ReactNode; delay?: number; x?: number; y?: number; className?: string }) {
@@ -314,7 +314,14 @@ function App() {
 
   useEffect(() => {
     const followLocation = () => {
-      if (new URLSearchParams(window.location.search).has('contact')) setDialog('contact');
+      const currentUrl = new URL(window.location.href);
+      const hasContactLink = currentUrl.pathname.replace(/\/+$/, '') === '/community';
+      if (hasContactLink || currentUrl.searchParams.has('contact')) {
+        setDialog('contact');
+        if (currentUrl.searchParams.has('contact') && currentUrl.pathname === '/') {
+          window.history.replaceState(null, '', `/community${currentUrl.hash}`);
+        }
+      }
       if (window.location.hash === '#projects') {
         requestAnimationFrame(() => document.getElementById('projects')?.scrollIntoView({ block: 'start', behavior: 'instant' }));
       }
@@ -580,26 +587,25 @@ function App() {
       </div>
     </section>
 
-    <footer id="contact"><div className="footer-brand"><img loading="eager" decoding="async" src="/branding/logo.png" alt="Pixel Growers" /><span>Digital partners for your next stage of growth.</span></div><div className="footer-contact"><a href="mailto:admin@pixelgrowers.com"><Mail size={16} />admin@pixelgrowers.com</a><address className="footer-location"><strong>Canada</strong><span>Milton, Ontario, Canada</span><a href="tel:+19059243063">+1 (905) 924-3063</a></address><address className="footer-location"><strong>India</strong><span>Jodhpur, Rajasthan, India</span><a href="tel:+918003239438">+91 (800) 323-9438</a></address><a href="https://www.pixelgrowers.com" target="_blank" rel="noreferrer">pixelgrowers.com <ArrowUpRight size={15} /></a></div><a className="back-to-top" href="#">Back to top ↑</a></footer>
+    <footer id="contact"><div className="footer-brand"><img loading="eager" decoding="async" src="/branding/logo.png" alt="Pixel Growers" /><span>Digital partners for your next stage of growth.</span></div><div className="footer-contact"><a href="mailto:admin@pixelgrowers.com"><Mail size={16} />admin@pixelgrowers.com</a><address className="footer-location"><strong>Canada</strong><span>Milton, Ontario, Canada</span><a href="tel:+19059243063">+1 (905) 924-3063</a></address><address className="footer-location"><strong>India</strong><span>Jodhpur, Rajasthan, India</span></address><a href="https://www.pixelgrowers.com" target="_blank" rel="noreferrer">pixelgrowers.com <ArrowUpRight size={15} /></a></div><a className="back-to-top" href="#">Back to top ↑</a></footer>
     {dialog && <div className="modal-backdrop" onClick={closeDialog}><section className={`modal${dialog === 'reviews' ? ' all-reviews-modal' : ''}`} role="dialog" aria-modal="true" aria-labelledby="dialog-title" onClick={event => event.stopPropagation()}><button ref={closeRef} className="close" aria-label="Close dialog" onClick={closeDialog}><X /></button>
       {dialog === 'reviews' ? <><span className="eyebrow">CLIENT TESTIMONIALS</span><h2 id="dialog-title">All client reviews</h2><div className="all-reviews-list">{testimonials.map(review => <article className="all-review-item" key={review.name}><div className="client-review-stars" aria-label="5 out of 5 stars">{Array.from({ length: 5 }, (_, index) => <Star key={index} size={14} fill="currentColor" aria-hidden="true" />)}</div><p>{review.quote}</p><strong>{review.name}</strong><small>Client · {review.location}</small></article>)}</div></>
         : dialogReview ? <><span className="eyebrow">CLIENT REVIEW / {dialogReview.location.toUpperCase()}</span><h2 id="dialog-title">A note from {dialogReview.name}</h2><div className="client-review-stars" aria-label="5 out of 5 stars">{Array.from({ length: 5 }, (_, index) => <Star key={index} size={18} fill="currentColor" aria-hidden="true" />)}</div><blockquote className="all-review-quote">{dialogReview.quote}</blockquote><p className="all-review-attribution">{dialogReview.name} · Client, {dialogReview.location}</p></>
-          : <><span className="eyebrow">{dialog === 'contact' ? 'LET’S GROW TOGETHER' : 'SELECTED WORK'}</span><h2 id="dialog-title">{dialog === 'contact' ? 'Call Pixel Growers.' : dialog}</h2>{dialog === 'contact' ? <><p>Choose a location to call. Tapping a number opens your device’s dialer.</p><div className="modal-call-options"><a href="tel:+19059243063"><strong>Canada</strong><span>+1 (905) 924-3063</span></a><a href="tel:+918003239438"><strong>India</strong><span>+91 (800) 323-9438</span></a></div><a className="modal-contact-link" href="mailto:admin@pixelgrowers.com">Or email admin@pixelgrowers.com <ArrowUpRight size={16} /></a></> : <p>Explore how thoughtful web design and digital growth strategy could support a project like this. Contact Pixel Growers to discuss your business goals.</p>}</>}
+          : dialog === 'contact' ? <div className="contact-modal-content">
+            <div className="contact-modal-brand"><img src="/branding/logo.png" alt="Pixel Growers" /></div>
+            <h2 id="dialog-title">Let’s Grow Our Local <span className="contact-modal-accent">Business Community!</span></h2>
+            <p>Choose how you’d like to connect with us for your free business check-up.</p>
+            <div className="contact-modal-options">
+              <div className="contact-modal-call">
+                <a className="contact-modal-option contact-modal-option-primary" href="tel:+19059243063"><Phone size={18} aria-hidden="true" />Call Us</a>
+              </div>
+              <a className="contact-modal-option" href="mailto:admin@pixelgrowers.com"><Mail size={18} aria-hidden="true" />Send an Email</a>
+              <a className="contact-modal-option contact-modal-option-book" href="https://calendly.com/atul-das/free-consultation" target="_blank" rel="noreferrer"><CalendarDays size={19} aria-hidden="true" />Book a Free Consultation</a>
+            </div>
+            <p className="contact-modal-footnote">100% Free <span aria-hidden="true">·</span> No Obligation <span aria-hidden="true">·</span> Local Support</p>
+          </div> : <><span className="eyebrow">SELECTED WORK</span><h2 id="dialog-title">{dialog}</h2><p>Explore how thoughtful web design and digital growth strategy could support a project like this. Contact Pixel Growers to discuss your business goals.</p></>}
     </section></div>}
   </main>;
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
