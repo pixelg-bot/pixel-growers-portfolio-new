@@ -1,0 +1,107 @@
+{
+  "cases": [
+    {
+      "id": "goldx",
+      "name": "Goldx Pollachi",
+      "domain": null,
+      "category": "local",
+      "sector": "Local-search SEO",
+      "market": "Pollachi, India",
+      "brief": "Improve local discoverability for a specialist gold-buying business and its distinctive search terms.",
+      "focus": "High-intent local queries in the supplied Google Business Profile ranking record.",
+      "rows": [
+        [
+          "Instant Cash for Gold pollachi",
+          "N/A",
+          "1",
+          "1",
+          "~2 months"
+        ],
+        [
+          "Money for gold Pollachi",
+          "N/A",
+          "1",
+          "1",
+          "~3 months"
+        ]
+      ],
+      "source": "39671d8a-01f9-4d39-8e3e-7fce96eb1374",
+      "highlight": "Two local queries. Two recorded #1 positions.",
+      "metric": "2 \u00d7 #1",
+      "metricLabel": "Finishing and later recorded positions",
+      "note": "This is Google Business Profile/local-search evidence. Starting positions were not supplied.",
+      "evidence": "/images/seo-portfolio/goldx-ranking-evidence.png"
+    },
+    {
+      "id": "prime",
+      "name": "Prime Organic",
+      "domain": "primeorganic.asia",
+      "category": "food",
+      "sector": "Organic grocery",
+      "market": "Hong Kong",
+      "brief": "Build search visibility for a newly created organic-products website and its relevant search audience.",
+      "focus": "Organic-grocery discovery across website and local-search touchpoints.",
+      "rows": [
+        [
+          "Indian Organic Grocery in hong Kong",
+          "N/A",
+          "5",
+          "1 (GMB)",
+          "~4 months"
+        ],
+        [
+          "organic grocery online hong kong",
+          "N/A",
+          "7",
+          "12",
+          "~4 months"
+        ],
+        [
+          "Buy organic grocery online",
+          "N/A",
+          "8",
+          "17",
+          "~2 months"
+        ]
+      ],
+      "source": "1ff06c0d-c9ba-4e71-bcc5-1ea719492f89",
+      "highlight": "A new-site visibility record across three grocery searches.",
+      "metric": "3 queries",
+      "metricLabel": "Supplied keyword examples",
+      "note": "The later #1 is explicitly marked GMB. It is a local-search result and is not directly comparable with an organic website position. Starting positions were not supplied.",
+      "evidence": "/images/seo-portfolio/prime-ranking-evidence.png"
+    }
+  ],
+  "scope": [
+    [
+      "01",
+      "Google Business Profile",
+      "Categories, services, business details, photos and updates that accurately represent the business."
+    ],
+    [
+      "02",
+      "NAP Consistency",
+      "Keep the business name, address and phone number aligned across the website and important directories."
+    ],
+    [
+      "03",
+      "Citations & Listings",
+      "Review relevant directory mentions, correct conflicting details and address duplicate listings where possible."
+    ],
+    [
+      "04",
+      "Reviews & Reputation",
+      "Build a practical review-request and response process, with attention to genuine feedback and platform policies."
+    ],
+    [
+      "05",
+      "Local Website Signals",
+      "Connect service and location information to useful pages, clear contact details and appropriate business markup."
+    ],
+    [
+      "06",
+      "Ongoing Monitoring",
+      "Document listing changes, review local visibility and use the findings to prioritize the next improvements."
+    ]
+  ]
+}

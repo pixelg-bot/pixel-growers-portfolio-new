@@ -1,0 +1,158 @@
+{
+  "reels": [
+    [
+      "Product storytelling",
+      "Skincare product film",
+      "00:24",
+      "Product detail, texture and a clear visual focus."
+    ],
+    [
+      "Food & place",
+      "Food storytelling",
+      "00:53",
+      "People, location and food presented through a short-form story."
+    ],
+    [
+      "Educational content",
+      "Skincare education",
+      "01:36",
+      "A longer educational format using close-ups, text and explanation."
+    ],
+    [
+      "Events & atmosphere",
+      "Event atmosphere",
+      "00:15",
+      "A brief location-led edit that captures the scale and energy of an event."
+    ],
+    [
+      "Fashion & lifestyle",
+      "Fashion & movement",
+      "00:17",
+      "Movement-led creative with people and styling at the center."
+    ]
+  ],
+  "profiles": [
+    [
+      "zanouchi",
+      "Zanouchi",
+      "Fashion & apparel",
+      "A statement-led fashion identity",
+      "A concise product promise and category-based Story highlights help visitors understand the range.",
+      [
+        "Brand positioning",
+        "Profile organization",
+        "Shopping journey"
+      ]
+    ],
+    [
+      "undn-laqr",
+      "UN/DN LAQR",
+      "Beauty & self-expression",
+      "A recognizable brand voice",
+      "A short, distinctive bio and expressive Story covers bring the brand\u2019s personality into the profile.",
+      [
+        "Brand voice",
+        "Story highlights",
+        "Community identity"
+      ]
+    ],
+    [
+      "roar-organic",
+      "ROAR Organic",
+      "Beverages & lifestyle",
+      "Product benefits, clearly presented",
+      "Hydration messaging, product information and themed highlights create a consistent point of entry.",
+      [
+        "Product communication",
+        "Lifestyle positioning",
+        "Content organization"
+      ]
+    ]
+  ],
+  "cases": [
+    {
+      "id": "meta-camping-2023",
+      "name": "Camping equipment",
+      "group": "Meta",
+      "channel": "Meta Ads \u00b7 Australia \u00b7 Jul 2023",
+      "headline": "Acquisition and returning-shopper campaigns for camping retail.",
+      "summary": "Prospecting and product remarketing connected new shoppers with items they had considered.",
+      "work": "Acquisition and returning-shopper campaigns for camping retail.",
+      "image": "meta-camping-2023",
+      "imagefile": "meta-camping-2023-clean.png",
+      "alt": "Camping equipment recreated report summary from supplied campaign figures",
+      "metrics": [
+        [
+          "45.75x",
+          "Best sales value / ad cost"
+        ],
+        [
+          "219",
+          "Purchases"
+        ],
+        [
+          "A$45,385",
+          "Purchase value"
+        ]
+      ],
+      "note": "Jul 1-18, 2023. 45.75x belongs to the best campaign, not the account average. Sales value is not profit.",
+      "recreated": true
+    },
+    {
+      "id": "meta-food-truck-2023",
+      "name": "Food-truck inquiries",
+      "group": "Meta",
+      "channel": "Meta Ads \u00b7 1\u201330 Jan 2023",
+      "headline": "Daily budgets and cost per lead are distinct measures.",
+      "summary": "Two lead-form campaigns introduced custom food-truck services to prospective buyers.",
+      "work": "Daily budgets and cost per lead are distinct measures.",
+      "image": "meta-food-truck-2023",
+      "imagefile": "meta-food-truck-2023-clean.png",
+      "alt": "Food-truck inquiries recreated report summary from supplied campaign figures",
+      "metrics": [
+        [
+          "527",
+          "Facebook form submissions"
+        ],
+        [
+          "$2.71",
+          "Average cost per lead"
+        ],
+        [
+          "$1,430",
+          "Ad cost for two campaigns"
+        ]
+      ],
+      "note": "Jan 1-30, 2023. 527 forms are not confirmed orders. The blended cost uses $1,429.62 of spend; dollar currency is unspecified.",
+      "recreated": true
+    },
+    {
+      "id": "linkedin-manufacturing-2024",
+      "name": "Manufacturing leads",
+      "group": "LinkedIn",
+      "channel": "LinkedIn Ads \u00b7 Oct\u2013Nov 2024",
+      "headline": "The featured campaign row is separated from the wider account header.",
+      "summary": "Sponsored Content reached manufacturing and industrial decision-makers.",
+      "work": "The featured campaign row is separated from the wider account header.",
+      "image": "linkedin-manufacturing-2024",
+      "imagefile": "linkedin-manufacturing-2024-clean.png",
+      "alt": "Manufacturing leads recreated report summary from supplied campaign figures",
+      "metrics": [
+        [
+          "24",
+          "Leads"
+        ],
+        [
+          "$67.17",
+          "Per lead"
+        ],
+        [
+          "$1,612.14",
+          "Ad cost"
+        ]
+      ],
+      "note": "Oct 13-Nov 11, 2024. Spend and 24 leads refer to one campaign; the header covers two. Lead quality and meetings are not shown.",
+      "recreated": true
+    }
+  ]
+}

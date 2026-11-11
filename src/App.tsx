@@ -73,7 +73,7 @@ type PortfolioProject = {
   category: string;
   platform: PortfolioPlatform;
   previewImage: string;
-  liveUrl?: string;
+  liveUrl: string;
 };
 const projects: PortfolioProject[] = [
   { title: "Skin & Tan", category: "Skincare & self-tan", platform: 'Shopify', previewImage: '/images/portfolio/shopify/skin-and-tan.webp', liveUrl: 'https://www.skinandtan.co.uk/' },
@@ -128,10 +128,10 @@ function ServicePortfolioGallery() {
   const covers = ['website-development', 'seo', 'genai', 'social-media', 'paid-ads', 'local-listing', 'email-marketing', 'graphic-design'];
   return <div className="service-portfolio-gallery">
     <div className="portfolio-service-grid" aria-label="Explore portfolios by service">
-      {categories.map(index => { const Icon = index === 7 ? Palette : services[index].icon; return <button key={labels[index]} type="button" className={`portfolio-service-card${selected === index ? ' is-selected' : ''}`} aria-expanded={selected === index} aria-controls="selected-service-portfolio" onClick={() => { if (index === 7) window.location.assign("/graphic-design/index.html"); else if (index === 1) window.location.assign("/seo/index.html"); else if (index === 2) window.location.assign("/genai/index.html"); else if (index === 4) window.location.assign("/paid-ads/index.html"); else if (index === 6) window.location.assign("/email-marketing/index.html"); else setSelected(index); }}>
+      {categories.map(index => { const Icon = index === 7 ? Palette : services[index].icon; return <button key={labels[index]} type="button" className={`portfolio-service-card${selected === index ? ' is-selected' : ''}`} aria-expanded={selected === index} aria-controls="selected-service-portfolio" onClick={() => { if (index === 7) window.location.assign("/graphic-design/index.html"); else if (index === 1) window.location.assign("/seo/index.html"); else if (index === 2) window.location.assign("/genai/index.html"); else if (index === 4) window.location.assign("/paid-ads/index.html"); else if (index === 6) window.location.assign("/email-marketing/index.html"); else if (index === 3) window.location.assign("/social-media/index.html"); else if (index === 5) window.location.assign("/local-listing/index.html"); else setSelected(index); }}>
         <div className="portfolio-service-art portfolio-uploaded-cover" aria-hidden="true"><img src={`/images/portfolio-covers/${covers[index]}-uploaded.webp`} srcSet={`/images/portfolio-covers/${covers[index]}-uploaded-small.webp 800w, /images/portfolio-covers/${covers[index]}-uploaded.webp 1600w`} sizes="(max-width: 600px) 90vw, (max-width: 1100px) 44vw, 22vw" width="1600" height="893" alt="" loading="lazy" decoding="async" /></div>
         <div className="portfolio-service-card-copy"><span className="portfolio-service-icon"><Icon size={20} /></span><h3>{labels[index]}</h3><span className="portfolio-service-open" aria-hidden="true"><ArrowRight size={20} /></span></div>
-        <p>{index === 0 ? 'Explore Shopify & WordPress projects' : index === 7 ? 'Explore the design collection' : index === 1 ? 'Explore SEO case studies' : index === 2 ? 'Explore our GEO approach & demonstrations' : index === 4 ? 'Explore six paid advertising channels' : index === 6 ? 'Explore email design collections' : 'Explore portfolio documents'}</p>
+        <p>{index === 0 ? 'Explore Shopify & WordPress projects' : index === 7 ? 'Explore the design collection' : index === 1 ? 'Explore SEO case studies' : index === 2 ? 'Explore our GEO approach & demonstrations' : index === 4 ? 'Explore six paid advertising channels' : index === 6 ? 'Explore email design collections' : index === 3 ? 'Explore social media work & reels' : index === 5 ? 'Explore local-search records & listings' : 'Explore portfolio documents'}</p>
       </button>; })}
     </div>
     {selected !== null && <div id="selected-service-portfolio" ref={panelRef} className="selected-service-portfolio" role="region" aria-labelledby="selected-service-title">
@@ -194,11 +194,11 @@ function ProjectCarousel() {
           if (offset < -Math.floor(visibleSlides.length / 2)) offset += visibleSlides.length;
           if (Math.abs(offset) > 2) return null;
           const isActive = index === activeIndex;
-          return <motion.button key={`${slide.project.title}-${slide.imageIndex}`} type="button" className={`portfolio-preview-card${isActive ? ' is-active' : ''}`} aria-label={`Select ${slide.project.title} preview ${slide.imageIndex + 1}`} aria-pressed={isActive} initial={false} animate={{ x: `${offset * 82}%`, scale: isActive ? 1 : Math.abs(offset) === 1 ? .76 : .58, opacity: isActive ? 1 : Math.abs(offset) === 1 ? .64 : .28, rotateY: isActive ? 0 : offset < 0 ? 24 : -24, zIndex: 10 - Math.abs(offset) }} exit={{ opacity: 0, x: '-120%' }} transition={{ duration: reducedMotion ? 0 : 1.2, ease: [.22, .68, 0, 1] }} onClick={() => setActiveIndex(index)}>
-            <img decoding="async" src={slide.image} alt={`${slide.project.title} preview ${slide.imageIndex + 1}`} />
+          return <motion.a key={`${slide.project.title}-${slide.imageIndex}`} href={slide.project.liveUrl} target="_blank" rel="noreferrer" className={`portfolio-preview-card${isActive ? ' is-active' : ''}`} aria-label={`View ${slide.project.title} live portfolio (opens in a new tab)`} initial={false} animate={{ x: `${offset * 82}%`, scale: isActive ? 1 : Math.abs(offset) === 1 ? .76 : .58, opacity: isActive ? 1 : Math.abs(offset) === 1 ? .64 : .28, rotateY: isActive ? 0 : offset < 0 ? 24 : -24, zIndex: 10 - Math.abs(offset) }} exit={{ opacity: 0, x: '-120%' }} transition={{ duration: reducedMotion ? 0 : 1.2, ease: [.22, .68, 0, 1] }}>
+            <img loading="lazy" decoding="async" src={slide.image} alt={`${slide.project.title} preview ${slide.imageIndex + 1}`} />
             <span className="portfolio-card-shade" aria-hidden="true" />
 
-          </motion.button>;
+          </motion.a>;
         })}
       </AnimatePresence>
     </div>
@@ -210,7 +210,7 @@ function ProjectCarousel() {
         <span className="portfolio-slide-count">{String(activeIndex + 1).padStart(2, '0')} / {String(visibleSlides.length).padStart(2, '0')}</span>
         <button type="button" className="portfolio-arrow" onClick={() => moveSlide(1)} aria-label="Next project"><ChevronRight size={20} /></button>
       </div>
-      <a className="portfolio-live-link" href={activeProject.liveUrl ?? '#contact'} target={activeProject.liveUrl ? '_blank' : undefined} rel={activeProject.liveUrl ? 'noreferrer' : undefined}>View live portfolio <ArrowUpRight size={17} /></a>
+      <a className="portfolio-live-link" href={activeProject.liveUrl} target="_blank" rel="noreferrer">View live portfolio <ArrowUpRight size={17} /></a>
     </div>
   </div>;
 }
@@ -609,3 +609,11 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+

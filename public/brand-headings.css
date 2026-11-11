@@ -24,3 +24,7 @@ body .expertise-panel>h3>img{filter:brightness(0) invert(1)!important;width:25px
 body .consultation-cta{position:relative;isolation:isolate;overflow:hidden;background:#8d2cb7!important;color:white!important;box-shadow:0 0 20px #ba54e53b!important}
 body .consultation-cta:after{content:'';position:absolute;inset:-40% auto -40% -20%;width:32%;background:linear-gradient(90deg,transparent,#fff9,transparent);pointer-events:none;animation:pg-button-sweep 3.8s ease-in-out infinite;z-index:1}
 @media(prefers-reduced-motion:reduce){body .consultation-cta:after{animation:none;display:none}}
+
+.closing > h2{margin-inline:auto;text-align:center}
+.artwork-image-link{display:block;cursor:zoom-in}
+.artwork-image-link .artwork-image{cursor:inherit}
