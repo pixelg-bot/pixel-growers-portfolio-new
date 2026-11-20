@@ -591,6 +591,14 @@ footer { gap: 32px; flex-wrap: wrap; padding: 42px 40px; border-color: #bc30eb35
 .portfolio-document-card { overflow: hidden; border: 1px solid #a754c46b; border-radius: 16px; background: #180e20; text-align: left; }
 .portfolio-document-card img { display: block; width: 100%; aspect-ratio: 16/9; object-fit: contain; }
 .portfolio-document-card>span { display: flex; align-items: center; gap: 12px; padding: 18px; }
+.website-portfolio-pdf { display: grid; grid-template-columns: minmax(180px,.8fr) minmax(0,1.5fr); align-items: center; gap: clamp(20px,4vw,40px); margin-top: 28px; padding: clamp(18px,3vw,30px); border: 1px solid #44464b; border-radius: 20px; background: radial-gradient(ellipse at 0 0,#a657cb18,transparent 55%),#191a1d; }
+.website-portfolio-pdf>img { display: block; width: 100%; aspect-ratio: 16/10; border: 1px solid #ffffff20; border-radius: 12px; object-fit: cover; }
+.website-portfolio-pdf-copy h4 { margin-top: 8px; color: #f4f4f5; font-size: clamp(1.2rem,2.4vw,1.7rem); font-weight: 600; letter-spacing: -.03em; }
+.website-portfolio-pdf-copy>p { max-width: 620px; margin-top: 9px; color: #b7b7bc; font-size: .9rem; line-height: 1.65; }
+.website-portfolio-pdf-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.website-portfolio-pdf-actions button,.website-portfolio-pdf-actions a { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 42px; padding: 10px 15px; border: 1px solid #68666d; border-radius: 999px; color: #f5f4f6; background: #232428; font: inherit; font-size: .8rem; font-weight: 600; text-decoration: none; cursor: pointer; transition: background .2s,border-color .2s; }
+.website-portfolio-pdf-actions button:hover,.website-portfolio-pdf-actions a:hover { border-color: #b98bc9; background: #303034; }
+.website-portfolio-pdf-actions :focus-visible { outline: 2px solid #d5a5e8; outline-offset: 3px; }
 .pdf-portfolio-backdrop { position: fixed; inset: 0; z-index: 100; background: #000c; display: grid; place-items: center; padding: 24px; }
 .pdf-portfolio-dialog { width: min(1100px,100%); height: 90svh; border: 1px solid #ba64d87a; border-radius: 18px; overflow: hidden; background: #140d1d; display: flex; flex-direction: column; }
 .pdf-portfolio-dialog header { display: flex; align-items: center; gap: 18px; padding: 16px 20px; }
@@ -600,7 +608,7 @@ footer { gap: 32px; flex-wrap: wrap; padding: 42px 40px; border-color: #bc30eb35
 .pdf-portfolio-dialog header button { display: grid; place-items: center; background: none; border: 0; padding: 6px; }
 .pdf-portfolio-dialog iframe { flex: 1; width: 100%; border: 0; background: #fff; }
 @media(max-width:900px) { .portfolio-service-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; } }
-@media(max-width:600px) { .portfolio-service-grid { grid-template-columns: 1fr; gap: 18px; } .portfolio-service-card { padding-bottom: 18px; } .portfolio-service-card h3 { font-size: 1.1rem; } .portfolio-detail-heading { align-items: flex-start; flex-direction: column; } .portfolio-document-grid { grid-template-columns: 1fr; } .pdf-portfolio-backdrop { padding: 10px; } .pdf-portfolio-dialog header { gap: 10px; padding: 12px; } .portfolio-awaiting { min-height: 280px; } }
+@media(max-width:600px) { .portfolio-service-grid { grid-template-columns: 1fr; gap: 18px; } .portfolio-service-card { padding-bottom: 18px; } .portfolio-service-card h3 { font-size: 1.1rem; } .portfolio-detail-heading { align-items: flex-start; flex-direction: column; } .portfolio-document-grid { grid-template-columns: 1fr; } .website-portfolio-pdf { grid-template-columns: 1fr; gap: 20px; } .website-portfolio-pdf>img { max-height: 220px; } .website-portfolio-pdf-actions { align-items: stretch; flex-direction: column; } .website-portfolio-pdf-actions button,.website-portfolio-pdf-actions a { width: 100%; } .pdf-portfolio-backdrop { padding: 10px; } .pdf-portfolio-dialog header { gap: 10px; padding: 12px; } .portfolio-awaiting { min-height: 280px; } }
 @media(prefers-reduced-motion:reduce) { .portfolio-service-card { transition: none; } }
 .graphic-portfolio-cover { position: relative; height: 100%; overflow: hidden; background: radial-gradient(ellipse at 80% 10%,#a54dce55,transparent 60%),#130b20; }
 .graphic-cover-type { position: absolute; top: 8%; left: 14%; font-family: Georgia,serif; font-size: clamp(70px,8vw,110px); font-style: italic; color: #edcdff; letter-spacing: -.1em; line-height: 1; transform: rotate(-8deg); }

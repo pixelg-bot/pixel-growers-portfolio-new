@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Design &amp; Development Portfolio | Pixel Growers</title>
+  <style>
+    @font-face{font-family:Graphik;src:url("../fonts/Graphik-Regular.ttf")}@font-face{font-family:Graphik;src:url("../fonts/Graphik-Medium.ttf");font-weight:600}
+    *{box-sizing:border-box}html{font-family:Graphik,Arial,sans-serif;color:#f5f4f1;background:#101113;font-size:10pt}body{margin:0;background:#101113;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    @page{size:A4;margin:0}.sheet{position:relative;width:210mm;height:297mm;overflow:hidden;padding:13mm 14mm 12mm;background:#111214;page-break-after:always;break-after:page}.sheet:last-child{page-break-after:auto;break-after:auto}
+    a{color:inherit;text-decoration:none}.eyebrow{color:#c99bdd;font-size:7.5pt;font-weight:600;letter-spacing:.18em;text-transform:uppercase}.brand{display:flex;align-items:center;gap:8px}.brand img{width:42mm;height:12mm;object-fit:contain;object-position:left center}.brand span{font-size:8pt;letter-spacing:.12em;font-weight:600}
+    .page-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:8mm}.page-top .brand{gap:0}.page-top .brand span{display:none}.page-top img{width:36mm;height:10mm}.page-count{color:#929399;font-size:7.5pt;letter-spacing:.1em}
+    .cover{display:flex;flex-direction:column;background:radial-gradient(ellipse at 86% 20%,#67427a55,transparent 35%),linear-gradient(155deg,#17171a 0%,#101113 70%)}.cover-meta{display:flex;align-items:center;justify-content:space-between}.cover-meta .brand img{height:13mm}.cover-copy{position:relative;z-index:1;margin:22mm 0 11mm}.cover-copy h1{max-width:155mm;margin:8mm 0 6mm;font-size:42pt;line-height:1.04;font-weight:600;letter-spacing:-.065em}.cover-copy p{max-width:132mm;margin:0;color:#c3c2c7;font-size:12pt;line-height:1.65}.cover-image{position:relative;overflow:hidden;height:86mm;border:1px solid #ffffff2a;border-radius:4mm;background:#1b1b1e}.cover-image img{width:100%;height:100%;object-fit:cover;object-position:top}.cover-image:after{position:absolute;inset:30% 0 0;content:"";background:linear-gradient(transparent,#101113)}.cover-image-link{position:absolute;right:5mm;bottom:5mm;z-index:2;padding:3mm 4mm;border:1px solid #ffffff55;border-radius:99px;background:#131316cc;font-size:8pt}.cover-highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:12mm}.highlight{padding:5mm 0;border-top:1px solid #55565a}.highlight strong{display:block;font-size:9pt}.highlight span{display:block;margin-top:2mm;color:#a8a8ad;font-size:8pt}
+    .work-heading{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:6mm}.work-heading h1{margin:2mm 0 0;font-size:24pt;line-height:1.1;letter-spacing:-.05em}.work-heading p{margin:2mm 0 0;color:#b1b1b7;font-size:8.5pt}.platform-pill{padding:2.5mm 4mm;border:1px solid #55565c;border-radius:99px;color:#dedde1;font-size:7.5pt}
+    .project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4mm 3.5mm}.project-card{min-width:0;overflow:hidden;border:1px solid #3c3d41;border-radius:2.5mm;background:#191a1d}.project-card img{display:block;width:100%;height:34mm;object-fit:cover;object-position:top;background:#25262a}.project-info{display:flex;min-height:12mm;align-items:center;justify-content:space-between;gap:2mm;padding:2.3mm}.project-info h2{overflow:hidden;margin:0;color:#f2f1f3;font-size:8pt;font-weight:600;white-space:nowrap;text-overflow:ellipsis}.project-info span{flex:none;color:#c99bdd;font-size:6.3pt}
+    .wordpress-grid .project-card:nth-child(7){grid-column:2}.work-note{display:flex;align-items:center;justify-content:space-between;margin-top:6mm;padding-top:4mm;border-top:1px solid #38393d;color:#9e9ea4;font-size:7pt}.work-note a{color:#d8b1e5}
+    .platform-intro{max-width:155mm;margin:12mm 0 10mm}.platform-intro h1{margin:4mm 0;font-size:30pt;line-height:1.06;letter-spacing:-.055em}.platform-intro p{max-width:130mm;color:#bcbcc1;font-size:10pt;line-height:1.65}
+    .platform-groups{display:grid;grid-template-columns:1fr 1fr;gap:4mm}.platform-group{min-height:0;padding:4mm;border:1px solid #3e3f44;border-radius:3mm;background:linear-gradient(145deg,#1c1d21,#17181b)}.platform-group-heading{display:flex;align-items:center;gap:3mm;margin-bottom:3mm}.platform-group-icon{display:grid;flex:none;place-items:center;width:9mm;height:9mm;border:1px solid #b98bc944;border-radius:2mm;background:#a657cb15;color:#d6b3e2}.platform-group-icon svg{width:5mm;height:5mm;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.platform-group-heading h2{margin:0;color:#f0e9f4;font-size:8.5pt;font-weight:600;letter-spacing:-.02em}.platform-group-heading p{margin:1mm 0 0;color:#999aa1;font-size:6.5pt}.platform-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.6mm}.platform-option{display:flex;min-width:0;min-height:10mm;align-items:center;gap:2mm;padding:1.5mm;border:1px solid #3b3c41;border-radius:2mm;background:#202125}.platform-mark{display:grid;flex:none;place-items:center;width:7mm;height:7mm;border-radius:1.5mm;color:#fff;font-size:7pt;font-weight:600;letter-spacing:-.04em}.platform-mark svg{display:block;width:5.2mm;height:5.2mm}.mark-shopify{background:#83a93c;color:#18210f}.mark-woo{background:#7f54b3;font-size:5.2pt;letter-spacing:-.07em}.mark-bigcommerce{background:#146b73;font-size:5.4pt}.mark-adobe{background:#e12929;font-size:10pt}.mark-square{grid-template-columns:repeat(2,2mm);grid-template-rows:repeat(2,2mm);gap:.6mm;background:#f4f4f4}.mark-square i{width:2mm;height:2mm;background:#17181b}.mark-wix{background:#f1f1f2;color:#111;font-size:5.5pt}.mark-squarespace{background:#f0f0f0;color:#17181b;font-size:6.5pt}.mark-webflow{background:#4353ff;font-size:9pt}.mark-framer{background:#212128;color:#a6a0ff;font-size:10pt}.mark-duda{background:#f26a41;font-size:9pt}.mark-wordpress{border-radius:50%;background:#fff}.mark-drupal{background:#0678be;font-size:9pt}.mark-joomla{background:#f0832c;font-size:9pt}.mark-hubspot{background:#ff7a59;font-size:9pt}.mark-ghost{background:#f1f1f1;color:#17181b;font-size:9pt}.mark-code{background:#343044;color:#d8b8ec;font-size:6pt}.mark-layers{background:#313c58;color:#aabfff;font-size:9pt}.mark-migrate{background:#385348;color:#9be0bf;font-size:10pt}.platform-option strong{overflow:hidden;color:#e8e7eb;font-size:7pt;font-weight:600;line-height:1.15;text-overflow:ellipsis}
+    .capability-title{margin:9mm 0 4mm;font-size:13pt;letter-spacing:-.03em}.capabilities{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm}.capability{padding:4mm;border-left:2px solid #a657cb;background:#191a1d}.capability strong{display:block;font-size:8pt}.capability span{display:block;margin-top:2mm;color:#aeb0b5;font-size:7.2pt;line-height:1.45}
+    .cta{display:flex;align-items:center;justify-content:space-between;gap:8mm;margin-top:9mm;padding:7mm;border-radius:3mm;background:#e8d9ef;color:#17151a}.cta h2{margin:0 0 2mm;font-size:18pt;line-height:1.12;letter-spacing:-.05em}.cta p{margin:0;color:#48434a;font-size:8pt}.cta-link{flex:none;padding:3.5mm 5mm;border-radius:99px;background:#211b26;color:white;font-size:8pt;font-weight:600}
+    .contact-row{display:flex;justify-content:space-between;gap:6mm;margin-top:7mm;color:#aaaab0;font-size:8pt}.contact-row a{color:#e2c5ef}.footer{position:absolute;right:14mm;bottom:5mm;left:14mm;display:flex;justify-content:space-between;padding-top:3mm;border-top:1px solid #36373b;color:#88898f;font-size:6.5pt}
+    @media print{body{background:#101113}.sheet{margin:0;box-shadow:none}}
+  </style>
+</head>
+<body>
+  <main>
+    <section class="sheet cover">
+      <div class="cover-meta">
+        <a class="brand" href="https://pixelgrowers.com"><img src="../branding/logo.png" alt="Pixel Growers"></a>
+        <span class="eyebrow">Website design + development</span>
+      </div>
+      <div class="cover-copy">
+        <span class="eyebrow">Digital experiences, made to move business forward</span>
+        <h1>A better website is your next growth move.</h1>
+        <p>Thoughtful design, intuitive experiences and dependable development, tailored to the way your business works.</p>
+      </div>
+      <div class="cover-image">
+        <img src="../images/portfolio/shopify/skin-and-tan.webp" alt="Skin &amp; Tan ecommerce website">
+        <a class="cover-image-link" href="https://www.skinandtan.co.uk/">Explore Skin &amp; Tan ↗</a>
+      </div>
+      <div class="cover-highlights">
+        <div class="highlight"><strong>Strategy first</strong><span>Clear journeys built around real business goals.</span></div>
+        <div class="highlight"><strong>Made for people</strong><span>Responsive experiences that feel simple to use.</span></div>
+        <div class="highlight"><strong>Ready to grow</strong><span>Flexible foundations for what comes next.</span></div>
+      </div>
+      <div class="footer"><span>PIXEL GROWERS · WEB DESIGN &amp; DEVELOPMENT</span><span>01 / 04</span></div>
+    </section>
+
+    <section class="sheet">
+      <div class="page-top">
+        <a class="brand" href="https://pixelgrowers.com"><img src="../branding/logo.png" alt="Pixel Growers"></a>
+        <span class="page-count">SELECTED WORK · 02 / 04</span>
+      </div>
+      <div class="work-heading">
+        <div><span class="eyebrow">E-commerce experiences</span><h1>Shopify storefronts</h1><p>Selected brands and stores. Open any preview to explore the live website.</p></div>
+        <span class="platform-pill">10 projects</span>
+      </div>
+      <div class="project-grid">
+        <a class="project-card" href="https://www.skinandtan.co.uk/"><img src="../images/portfolio/shopify/skin-and-tan.webp" alt=""><div class="project-info"><h2>Skin &amp; Tan</h2><span>View site ↗</span></div></a>
+        <a class="project-card" href="https://undnlaqr.com/"><img src="../images/portfolio/shopify/undn-laqr.webp" alt=""><div class="project-info"><h2>UN/DN LAQR</h2><span>View site ↗</span></div></a>
+        <a class="project-card" href="https://roarorganic.com/"><img src="../images/portfolio/shopify/roar-organic.webp" alt=""><div class="project-info"><h2>ROAR Organic</h2><span>View site ↗</span></div></a>
+        <a class="project-card" href="https://swissarabian.com/"><img src="../images/portfolio/shopify/swiss-arabian.webp" alt=""><div class="project-info"><h2>Swiss Arabian</h2><span>View site ↗</span></div></a>
+        <a class="project-card" href="https://82e.com/"><img src="../images/portfolio/shopify/82e.webp" alt=""><div class="project-info"><h2>82°E</h2><span>View site ↗</span></div></a>
+        <a class="project-card" href="https://efektivshop.com/"><img src="../images/portfolio/shopify/efektiv-beauty.webp" alt=""><div class="project-info"><h2>e·fek·tiv Beauty</h2><span>View site ↗</span></div></a>
+        <a class="project-card" href="https://deardiary.in/"><img src="../images/portfolio/shopify/dear-diary.webp" alt=""><div class="project-info"><h2>Dear Diary</h2><span>View site ↗</span></div></a>
+        <a class="project-card" href="https://stylerule.com/"><img src="../images/portfolio/shopify/style-rule.webp" alt=""><div class="project-info"><h2>Style Rule</h2><span>View site ↗</span></div></a>
+        <a class="project-card" href="https://myayurvita.com/"><img src="../images/portfolio/shopify/ayurvita.webp" alt=""><div class="project-info"><h2>Ayurvita</h2><span>View site ↗</span></div></a>
+        <a class="project-card" href="https://sally-hershberger.com/"><img src="../images/portfolio/shopify/sally-hershberger.webp" alt=""><div class="project-info"><h2>Sally Hershberger</h2><span>View site ↗</span></div></a>
+      </div>
+      <div class="work-note"><span>Want a closer look? Select any project to open its live website.</span><a href="https://pixelgrowers.com/">pixelgrowers.com ↗</a></div>
+      <div class="footer"><span>PIXEL GROWERS · SHOPIFY</span><span>02 / 04</span></div>
+    </section>
+
+    <section class="sheet">
+      <div class="page-top">
+        <a class="brand" href="https://pixelgrowers.com"><img src="../branding/logo.png" alt="Pixel Growers"></a>
+        <span class="page-count">SELECTED WORK · 03 / 04</span>
+      </div>
+      <div class="work-heading">
+        <div><span class="eyebrow">Business and brand websites</span><h1>WordPress websites</h1><p>Explore a selection of responsive websites and digital experiences.</p></div>
+        <span class="platform-pill">7 projects</span>
+      </div>
+      <div class="project-grid wordpress-grid">
+        <a class="project-card" href="https://fitqii.com/"><img src="../images/portfolio/wordpress/fitqii.webp" alt=""><div class="project-info"><h2>Fitqii</h2><span>View site ↗</span></div></a>
+        <a class="project-card" href="https://monkify.app/"><img src="../images/portfolio/wordpress/monkify.webp" alt=""><div class="project-info"><h2>Monkify</h2><span>View site ↗</span></div></a>
+        <a class="project-card" href="https://rajkunwarpawar.com/"><img src="../images/portfolio/wordpress/rajkunwar-pawar.webp" alt=""><div class="project-info"><h2>Rajkunwar Pawar</h2><span>View site ↗</span></div></a>
+        <a class="project-card" href="https://homekode.com/"><img src="../images/portfolio/wordpress/homekode.webp" alt=""><div class="project-info"><h2>Homekode</h2><span>View site ↗</span></div></a>
+        <a class="project-card" href="https://opelhome.com/"><img src="../images/portfolio/wordpress/opel-home.webp" alt=""><div class="project-info"><h2>Opel Home</h2><span>View site ↗</span></div></a>
+        <a class="project-card" href="https://woodanfurniturehouse.com/"><img src="../images/portfolio/wordpress/woodan-furniture-house.webp" alt=""><div class="project-info"><h2>Woodan Furniture House</h2><span>View site ↗</span></div></a>
+        <a class="project-card" href="https://indiainformatics.net/"><img src="../images/portfolio/wordpress/india-informatics.webp" alt=""><div class="project-info"><h2>India Informatics</h2><span>View site ↗</span></div></a>
+      </div>
+      <div class="work-note"><span>Project previews link directly to the live website.</span><a href="https://pixelgrowers.com/">pixelgrowers.com ↗</a></div>
+      <div class="footer"><span>PIXEL GROWERS · WORDPRESS</span><span>03 / 04</span></div>
+    </section>
+
+    <section class="sheet">
+      <div class="page-top">
+        <a class="brand" href="https://pixelgrowers.com"><img src="../branding/logo.png" alt="Pixel Growers"></a>
+        <span class="page-count">A PLATFORM FOR YOUR NEXT CHAPTER · 04 / 04</span>
+      </div>
+      <div class="platform-intro">
+        <span class="eyebrow">The right foundation for your goals</span>
+        <h1>Your website. Your way to grow.</h1>
+        <p>From a quick-to-manage site to a full commerce experience, we help you choose and build on a platform that fits your goals, content and plans for growth.</p>
+      </div>
+      <div class="platform-groups">
+        <div class="platform-group">
+          <div class="platform-group-heading"><span class="platform-group-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8h16l-1 12H5L4 8Z"/><path d="M8 9V6a4 4 0 0 1 8 0v3"/></svg></span><div><h2>Commerce</h2><p>Stores made to sell</p></div></div>
+          <div class="platform-grid">
+            <div class="platform-option"><span class="platform-mark mark-shopify">S</span><strong>Shopify</strong></div>
+            <div class="platform-option"><span class="platform-mark mark-woo">Woo</span><strong>WooCommerce</strong></div>
+            <div class="platform-option"><span class="platform-mark mark-bigcommerce">BC</span><strong>BigCommerce</strong></div>
+            <div class="platform-option"><span class="platform-mark mark-adobe">A</span><strong>Adobe Commerce</strong></div>
+            <div class="platform-option"><span class="platform-mark mark-square"><i></i><i></i><i></i><i></i></span><strong>Square Online</strong></div>
+          </div>
+        </div>
+        <div class="platform-group">
+          <div class="platform-group-heading"><span class="platform-group-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 5 7-2 2 7-7 2-2-7Z"/><path d="m13 7 7-2v7l-7 2V7Z"/><path d="m6 14 7-2v7l-7 2v-7Z"/></svg></span><div><h2>Visual builders</h2><p>Flexible no-code platforms</p></div></div>
+          <div class="platform-grid">
+            <div class="platform-option"><span class="platform-mark mark-wix">WiX</span><strong>Wix</strong></div>
+            <div class="platform-option"><span class="platform-mark mark-squarespace">SS</span><strong>Squarespace</strong></div>
+            <div class="platform-option"><span class="platform-mark mark-webflow">W</span><strong>Webflow</strong></div>
+            <div class="platform-option"><span class="platform-mark mark-framer">F</span><strong>Framer</strong></div>
+            <div class="platform-option"><span class="platform-mark mark-duda">D</span><strong>Duda</strong></div>
+          </div>
+        </div>
+        <div class="platform-group">
+          <div class="platform-group-heading"><span class="platform-group-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><div><h2>Content platforms</h2><p>Own your content and story</p></div></div>
+          <div class="platform-grid">
+            <div class="platform-option"><span class="platform-mark mark-wordpress"><img src="../images/seo-portfolio/icons/wordpress.svg" alt=""></span><strong>WordPress</strong></div>
+            <div class="platform-option"><span class="platform-mark mark-drupal">D</span><strong>Drupal</strong></div>
+            <div class="platform-option"><span class="platform-mark mark-joomla">J</span><strong>Joomla</strong></div>
+            <div class="platform-option"><span class="platform-mark mark-hubspot">H</span><strong>HubSpot CMS</strong></div>
+            <div class="platform-option"><span class="platform-mark mark-ghost">G</span><strong>Ghost</strong></div>
+          </div>
+        </div>
+        <div class="platform-group">
+          <div class="platform-group-heading"><span class="platform-group-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg></span><div><h2>Built around your needs</h2><p>More ways to make it work</p></div></div>
+          <div class="platform-grid">
+            <div class="platform-option"><span class="platform-mark mark-code">&lt;/&gt;</span><strong>Custom integrations</strong></div>
+            <div class="platform-option"><span class="platform-mark mark-layers">◈</span><strong>Headless builds</strong></div>
+            <div class="platform-option"><span class="platform-mark mark-migrate">↗</span><strong>Migrations &amp; redesigns</strong></div>
+          </div>
+        </div>
+      </div>
+      <h2 class="capability-title">A thoughtful process. An outcome built around you.</h2>
+      <div class="capabilities">
+        <div class="capability"><strong>Plan with purpose</strong><span>Align audience, content and business goals before design begins.</span></div>
+        <div class="capability"><strong>Design for clarity</strong><span>Make it easier for the right people to find their next step.</span></div>
+        <div class="capability"><strong>Build for what’s next</strong><span>Create a responsive foundation your team can grow with.</span></div>
+      </div>
+      <div class="cta">
+        <div><h2>Ready for a better website?</h2><p>Let’s find the right platform and plan for your next stage.</p></div>
+        <a class="cta-link" href="https://calendly.com/atul-das/free-consultation">Let’s talk ↗</a>
+      </div>
+      <div class="contact-row"><a href="mailto:admin@pixelgrowers.com">admin@pixelgrowers.com</a><a href="https://pixelgrowers.com/">pixelgrowers.com</a><span>Canada · India</span></div>
+      <div class="footer"><span>PIXEL GROWERS · WEB DESIGN &amp; DEVELOPMENT</span><span>04 / 04</span></div>
+    </section>
+  </main>
+</body>
+</html>

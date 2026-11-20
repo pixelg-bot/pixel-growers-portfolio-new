@@ -98,6 +98,7 @@ const projects: PortfolioProject[] = [
 type PortfolioDocument = { title: string; previewImage: string; pdfUrl: string };
 // Add approved PDF portfolios here with their preview images and same-origin PDF URLs.
 const servicePortfolioDocuments: Record<number, PortfolioDocument[]> = {
+  0: [{ title: "Pixel Growers / Web Design & Development", previewImage: "/images/portfolio-covers/web-design-cover-3d.webp", pdfUrl: "/documents/pixel-growers-website-development-portfolio.pdf" }],
   1: [{ title: "Pixel Growers / SEO", previewImage: "/images/portfolio-covers/seo-cover-3d.webp", pdfUrl: "/documents/pixel-growers-seo-portfolio.pdf" }], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [{ title: "Pixel Growers / Graphic Design", previewImage: "/images/graphic-portfolio/amazon-01.webp", pdfUrl: "/documents/pixel-growers-graphic-design.pdf" }],
 };
 function ServicePortfolioGallery() {
@@ -136,7 +137,21 @@ function ServicePortfolioGallery() {
     </div>
     {selected !== null && <div id="selected-service-portfolio" ref={panelRef} className="selected-service-portfolio" role="region" aria-labelledby="selected-service-title">
       <div className="portfolio-detail-heading"><div><span className="section-kicker">{selected === 0 ? 'LIVE WEBSITE PORTFOLIO' : 'PDF PORTFOLIO'}</span><h3 id="selected-service-title" ref={headingRef} tabIndex={-1}>{labels[selected]}</h3></div><button className="portfolio-back" type="button" onClick={() => { setSelected(null); window.document.querySelector<HTMLButtonElement>('.portfolio-service-card.is-selected')?.focus(); }}>Close gallery <X size={17}/></button></div>
-      {selected === 0 ? <ProjectCarousel /> : (servicePortfolioDocuments[selected] ?? []).length ? <div className="portfolio-document-grid">{servicePortfolioDocuments[selected].map(item => <button type="button" key={item.pdfUrl} className="portfolio-document-card" onClick={() => setDocument(item)}><img src={item.previewImage} alt={item.title} loading="lazy" /><span><FileText size={20}/>{item.title}<ArrowUpRight size={18}/></span></button>)}</div> : <div className="portfolio-awaiting"><span className="portfolio-awaiting-icon"><FileText size={30}/></span><h4>Portfolio coming soon</h4><p>We’re preparing our {labels[selected].toLowerCase()} portfolio. PDF examples will be available here soon.</p></div>}
+      {selected === 0 ? <>
+        <ProjectCarousel />
+        {servicePortfolioDocuments[0].map(item => <article className="website-portfolio-pdf" key={item.pdfUrl}>
+          <img src={item.previewImage} alt="" loading="lazy" />
+          <div className="website-portfolio-pdf-copy">
+            <span className="section-kicker">TAKE THE PORTFOLIO WITH YOU</span>
+            <h4>Web Design &amp; Development Portfolio</h4>
+            <p>Browse selected Shopify and WordPress projects, explore the platforms we work with, and visit the live websites directly from the PDF.</p>
+            <div className="website-portfolio-pdf-actions">
+              <button type="button" onClick={() => setDocument(item)}><FileText size={17} /> Preview PDF</button>
+              <a href={item.pdfUrl} download><Download size={17} /> Download portfolio</a>
+            </div>
+          </div>
+        </article>)}
+      </> : (servicePortfolioDocuments[selected] ?? []).length ? <div className="portfolio-document-grid">{servicePortfolioDocuments[selected].map(item => <button type="button" key={item.pdfUrl} className="portfolio-document-card" onClick={() => setDocument(item)}><img src={item.previewImage} alt={item.title} loading="lazy" /><span><FileText size={20}/>{item.title}<ArrowUpRight size={18}/></span></button>)}</div> : <div className="portfolio-awaiting"><span className="portfolio-awaiting-icon"><FileText size={30}/></span><h4>Portfolio coming soon</h4><p>We’re preparing our {labels[selected].toLowerCase()} portfolio. PDF examples will be available here soon.</p></div>}
     </div>}
     {document && <div className="pdf-portfolio-backdrop" onClick={() => setDocument(null)}><section className="pdf-portfolio-dialog" role="dialog" aria-modal="true" aria-labelledby="pdf-portfolio-title" onClick={event => event.stopPropagation()}><header><h3 id="pdf-portfolio-title">{document.title}</h3><a href={document.pdfUrl} target="_blank" rel="noreferrer"><Download size={18}/>Open PDF</a><button ref={closeButtonRef} type="button" aria-label="Close PDF" onClick={() => setDocument(null)}><X/></button></header><iframe src={document.pdfUrl} title={document.title}/></section></div>}
   </div>;
